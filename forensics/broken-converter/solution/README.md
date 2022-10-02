@@ -36,33 +36,6 @@ However, opening the `.ttf` file in programs that sort by ASCII, such as [FontFo
 
 <code>f\\@g:<u>SEKAI{sCR4MBLeD_a5ci1-FONT+GlYPHZ,W3|!.d0n&}</u>"#$%'()*/26789;&lt;=&gt;?JQUVX[]^`bhjkmopqrtuvwxyz~</code>
 
-## flag Mono
-
-We can use the `.ttf` file from the solve for "Broken Converter".
-
-If you inspect the font info in [FontForge](https://fontforge.org/) with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>, you can see in the Lookup tab that four different "Style Sets" have been implemented into this font:
-
-![Inspecting the "Lookup" tab in FontForge](lookup.png)
-
-These are called "OpenType Stylistic Sets". According to its official Microsoft [documentation](https://docs.microsoft.com/en-us/typography/opentype/spec/features_pt#ssxx):
-
-> In addition to, or instead of, stylistic alternatives of individual glyphs [...], some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, e.g. multiple variants for lowercase letters in a Latin font.
-
-In FontForge you can actually view the ruleset for these styles with the <kbd>Edit Data</kbd> button. This is the ruleset for `ss01`:
-
-![Inspecting stylistic set ruleset $2 in FontForge](ruleset.png)
-
-> ampersand quotesingle | a @<Single Substitution lookup 4> | g  
-> | f @<Single Substitution lookup 4> | l a g  
-> ampersand quotesingle parenleft | g @<Multiple Substitution lookup 5> |  
-> ampersand | l @<Single Substitution lookup 4> | a g
-
-Let's test out typing `flag` on [FontDrop!](https://fontdrop.info/) and changing the stylistic set:
-
-![Changing stylistic sets on FontDrop!](mono-flag.gif)
-
-Combining everything together, the flag is `SEKAI{OpenTypeMagicGSUBIsTuringComplete}`.
-
 ## Credit
 
 Typeface:
