@@ -1,2 +1,6 @@
-# sekaictf-2022
-Source code and writeup for SekaiCTF 2022. https://ctftime.org/event/1619
+# SekaiCTF 2022
+
+This repo contains source code and writeups for SekaiCTF 2022.
+
+## Challenges
+
