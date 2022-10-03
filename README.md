@@ -18,7 +18,7 @@ This repository contains official **source code** and **writeups** for the major
 
 ## Cryptography
 
-<img src="https://files.catbox.moe/lwcdks.svg" width=300 align="right">
+<img src="https://files.catbox.moe/lwcdks.svg" width=250 align="right">
 
 | Name                                                       | Author           | Difficulty | Solves |
 | ---------------------------------------------------------- | ---------------- | ---------- | ------ |
