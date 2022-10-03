@@ -32,7 +32,7 @@ This repository contains official **source code** and **writeups** for the major
 
 ## Forensics
 
-<img src="https://files.catbox.moe/lkdane.svg" width=300 align="right">
+<img src="https://files.catbox.moe/lkdane.svg" width=250 align="right">
 
 | Name                                            | Author       | Difficulty | Solves |
 | ----------------------------------------------- | ------------ | ---------- | ------ |
@@ -45,7 +45,7 @@ This repository contains official **source code** and **writeups** for the major
 
 ## Miscellaneous
 
-<img src="https://files.catbox.moe/b6cssb.png" width=300 align="right">
+<img src="https://files.catbox.moe/b6cssb.png" width=250 align="right">
 
 | Name                                       | Author    | Difficulty | Solves |
 | ------------------------------------------ | --------- | ---------- | ------ |
@@ -58,7 +58,7 @@ This repository contains official **source code** and **writeups** for the major
 
 ## PPC
 
-<img src="https://files.catbox.moe/44ugey.png" width=300 align="right">
+<img src="https://files.catbox.moe/44ugey.png" width=250 align="right">
 
 | Name                                            | Author    | Difficulty | Solves |
 | ----------------------------------------------- | --------- | ---------- | ------ |
@@ -70,7 +70,7 @@ This repository contains official **source code** and **writeups** for the major
 
 ## Binary Exploitation
 
-<img src="https://files.catbox.moe/z947xz.png" width=300 align="right">
+<img src="https://files.catbox.moe/z947xz.png" width=250 align="right">
 
 | Name                                        | Author       | Difficulty | Solves |
 | ------------------------------------------- | ------------ | ---------- | ------ |
@@ -82,7 +82,7 @@ This repository contains official **source code** and **writeups** for the major
 
 ## Reverse Engineering
 
-<img src="https://files.catbox.moe/s8gk6b.png" width=300 align="right">
+<img src="https://files.catbox.moe/s8gk6b.png" width=250 align="right">
 
 | Name                                                   | Author             | Difficulty | Solves |
 | ------------------------------------------------------ | ------------------ | ---------- | ------ |
@@ -95,7 +95,7 @@ This repository contains official **source code** and **writeups** for the major
 
 ## Web
 
-<img src="https://files.catbox.moe/j0zw08.svg" width=300 align="right">
+<img src="https://files.catbox.moe/j0zw08.svg" width=250 align="right">
 
 | Name                                      | Author   | Difficulty | Solves |
 | ----------------------------------------- | -------- | ---------- | ------ |
