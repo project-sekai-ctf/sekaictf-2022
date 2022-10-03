@@ -4,7 +4,8 @@
 
 # SekaiCTF 2022
 
-![License][License]
+![Code License: AGPL v3][Code License]
+![Non-Code License: CC BY-NC-SA 4.0][Non-Code License]
 ![Stars][Stars]
 
 This repository contains official **source code** and **writeups** for the majority of challenges in SekaiCTF 2022.
@@ -145,4 +146,5 @@ Non-code content in this repository is licnesed under a [Creative Commons Attrib
 [Reverse Engineering]: https://files.catbox.moe/s8gk6b.png
 [Web]: https://files.catbox.moe/j0zw08.svg
 [cc-by-nc-sa]: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
+[Non-Code License]: https://img.shields.io/badge/non--code%20license-CC%20BY--NC--SA%204.0-91FDFF
+[Code License]: https://img.shields.io/badge/code%20license-AGPL--3.0-FEBFF6
