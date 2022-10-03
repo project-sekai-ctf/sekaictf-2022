@@ -23,7 +23,7 @@ The theme “Visual Studio Code Default Dark High Contrast“ indicates the pale
 
 When decoded, the string will read [`https://matryoshka.sekai.team/-qLf-Aoaur8ZVqK4aFngYg.png`](https://matryoshka.sekai.team/-qLf-Aoaur8ZVqK4aFngYg.png). The image will have a really nice QR code that you should totally scan:
 
-![QR Code](../-qLf-Aoaur8ZVqK4aFngYg.png)
+![QR Code](../challenge/-qLf-Aoaur8ZVqK4aFngYg.png)
 
 ---
 
