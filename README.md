@@ -128,7 +128,7 @@ Program and source code in this repository is licensed under the GNU Affero Gene
 
 Non-code content in this repository is licnesed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](cc-by-nc-sa).
 
-> [SEKAI CTF 2022 Challenges and Solutions](https://github.com/project-sekai-ctf/sekaictf-2022/) by Project SEKAI CTF team and contributors is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](cc-by-nc-sa) .
+> [SEKAI CTF 2022 Challenges and Solutions](https://github.com/project-sekai-ctf/sekaictf-2022/) by Project SEKAI CTF team and contributors is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](cc-by-nc-sa).
 
 [Banner]: https://files.catbox.moe/sps53u.png
 [License]: https://img.shields.io/github/license/project-sekai-ctf/sekaictf-2022
