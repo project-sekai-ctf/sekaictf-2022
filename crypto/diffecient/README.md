@@ -1,4 +1,4 @@
-# diffecient
+# Diffecient
 
 ## Description
 
