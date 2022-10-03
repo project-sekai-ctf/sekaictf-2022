@@ -9,3 +9,4 @@
 | [Pafs](pafs/)                               | Radewoosh | Hard (3)   | 16     |
 | [Mind Calculator](mind-calculator/)         | pamLELcu  | Expert (4) | 16     |
 | [Console Port Pro](console-port-pro/)       | pamLELcu  | Master (5) | 7      |
+ 

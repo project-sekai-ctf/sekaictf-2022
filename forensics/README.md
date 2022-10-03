@@ -10,3 +10,4 @@
 | [flag Mono](flag-mono/)               | pamLELcu     | Hard (3)   | 47     |
 | [Symbolic Needs 1](symbolic-needs/)   | Battlemonger | Hard (3)   | 24     |
 | [Symbolic Needs 2](symbolic-needs/)   | Battlemonger | Expert (4) | 18     |
+ 

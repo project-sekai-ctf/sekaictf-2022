@@ -11,3 +11,4 @@
 | [EZMaze](ezmaze/)                                   | Utaha            | Hard (3)   | 11     |
 | [Robust CBC](robust-cbc/)                           | sahuang & Yanhu1 | Expert (4) | 10     |
 | [FaILProof Revenge](failproof-revenge/)             | deuterium        | Expert (4) | 16     |
+ 
