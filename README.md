@@ -110,7 +110,7 @@ This repository contains official **source code** and **writeups** for the major
 
 Program and source code in this repository is licensed under the GNU Affero General Public License version 3.
 
-> SEKAI CTF 2022 Challenges and Solutions
+> SEKAI CTF 2022 Challenges and Solutions  
 > Copyright (C) 2022 Project SEKAI CTF team and contributors
 > 
 > This program is free software: you can redistribute it and/or modify
