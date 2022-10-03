@@ -4,9 +4,9 @@
 
 | Name                                    | Author                                    | Difficulty | Solves                                             |
 |-----------------------------------------|-------------------------------------------|------------|-----------------------------------------------------|
-| Console Port         | pamLELcu   | Easy (1)   |     291      |
+| [Console Port](../ppc/console-port-pro/)         | pamLELcu   | Easy (1)   |     291      |
 | [Sus](sus/)     | pamLELcu | Easy (1)   | 95    |
 | [Vocaloid Heardle](vocaloid-heardle/) | pamLELcu | Normal (2) | 54 |
 | [Matryoshka](matryoshka/)               | pamLELcu  | Expert (4) | 14   |
 | [Random Song](random-song/)           | Yanhu1    | Hard (3)   | 13         |
-| Borpa                                   | ElleuchX1 | Master (5) |      4   |
+| [Borpa](borpa/)                                   | ElleuchX1 | Master (5) |      4   |

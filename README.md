@@ -29,12 +29,12 @@ This repo contains source code and writeups for SekaiCTF 2022.
 
 | Name                                    | Author                                    | Difficulty | Solves                                             |
 |-----------------------------------------|-------------------------------------------|------------|-----------------------------------------------------|
-| Console Port         | pamLELcu   | Easy (1)   |     291      |
+| [Console Port](ppc/console-port-pro/)         | pamLELcu   | Easy (1)   |     291      |
 | [Sus](misc/sus/)     | pamLELcu | Easy (1)   | 95    |
 | [Vocaloid Heardle](misc/vocaloid-heardle/) | pamLELcu | Normal (2) | 54 |
 | [Matryoshka](misc/matryoshka/)               | pamLELcu  | Expert (4) | 14   |
 | [Random Song](misc/random-song/)           | Yanhu1    | Hard (3)   | 13         |
-| Borpa                                   | ElleuchX1 | Master (5) |      4   |
+| [Borpa](misc/borpa/)                | ElleuchX1 | Master (5) |      4   |
 
 ## PPC
 
