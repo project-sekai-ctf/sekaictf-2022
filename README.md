@@ -109,7 +109,7 @@ This repository contains official **source code** and **writeups** for the major
 
 ## License
 
-Program and source code in this repository is licensed under the GNU Affero General Public License version 3.
+Any **program** and/or **source code** in this repository is licensed under the [GNU Affero General Public License version 3][agpl]:
 
 > SEKAI CTF 2022 Challenges and Solutions  
 > Copyright (C) 2022 Project SEKAI CTF team and contributors
@@ -127,7 +127,7 @@ Program and source code in this repository is licensed under the GNU Affero Gene
 > You should have received a copy of the GNU Affero General Public License
 > along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Non-code content in this repository is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](cc-by-nc-sa).
+Any **non-code/program content** (writeups, READMEs, descriptions) in this repository is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](cc-by-nc-sa):
 
 > [SEKAI CTF 2022 Challenges and Solutions](https://github.com/project-sekai-ctf/sekaictf-2022/) by Project SEKAI CTF team and contributors is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
 
@@ -144,6 +144,7 @@ Non-code content in this repository is licensed under a [Creative Commons Attrib
 [Binary Exploitation]: https://files.catbox.moe/z947xz.png
 [Reverse Engineering]: https://files.catbox.moe/s8gk6b.png
 [Web]: https://files.catbox.moe/j0zw08.svg
+[agpl]: https://www.gnu.org/licenses/agpl-3.0.en.html
 [cc-by-nc-sa]: https://creativecommons.org/licenses/by-nc-sa/4.0/
 [Non-Code License]: https://img.shields.io/badge/non--code%20license-CC%20BY--NC--SA%204.0-3cc4c7
 [Code License]: https://img.shields.io/badge/code%20license-AGPL--3.0-db67d2
