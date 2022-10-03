@@ -106,6 +106,29 @@ This repository contains official **source code** and **writeups** for the major
 | [Safelist](web/safelist/)                 | Strellic | Expert (4) | 3      |
 | [Obligatory Calc](web/obligatory-calc/)   | Strellic | Master (5) | 1      |
 
+## License
+
+Program and source code in this repository is licensed under the GNU Affero General Public License version 3.
+
+> SEKAI CTF 2022 Challenges and Solutions  
+> Copyright (C) 2022 Project SEKAI CTF team and contributors
+> 
+> This program is free software: you can redistribute it and/or modify
+> it under the terms of the GNU Affero General Public License as published
+> by the Free Software Foundation, either version 3 of the License, or
+> (at your option) any later version.
+> 
+> This program is distributed in the hope that it will be useful,
+> but WITHOUT ANY WARRANTY; without even the implied warranty of
+> MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+> GNU Affero General Public License for more details.
+> 
+> You should have received a copy of the GNU Affero General Public License
+> along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Non-code content in this repository is licnesed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](cc-by-nc-sa).
+
+> [SEKAI CTF 2022 Challenges and Solutions](https://github.com/project-sekai-ctf/sekaictf-2022/) by Project SEKAI CTF team and contributors is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](cc-by-nc-sa) .
 
 [Banner]: https://files.catbox.moe/sps53u.png
 [License]: https://img.shields.io/github/license/project-sekai-ctf/sekaictf-2022
@@ -121,3 +144,5 @@ This repository contains official **source code** and **writeups** for the major
 [Binary Exploitation]: https://files.catbox.moe/z947xz.png
 [Reverse Engineering]: https://files.catbox.moe/s8gk6b.png
 [Web]: https://files.catbox.moe/j0zw08.svg
+[cc-by-nc-sa]: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
