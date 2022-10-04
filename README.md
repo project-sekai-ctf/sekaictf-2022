@@ -1,8 +1,6 @@
 <div align="center">
 
-![Banner][Banner]
-
-# SekaiCTF 2022
+# ![Banner][Banner]
 
 ![Code License: AGPL v3][Code License]
 ![Non-Code License: CC BY-NC-SA 4.0][Non-Code License]
@@ -11,9 +9,12 @@
 This repository contains official **source code** and **writeups** for the majority of challenges in SekaiCTF 2022.
 
 [CTFTime Event][CTFTime Event] • 
-[Website][Website] • 
+[Website][Website] •
+[Discord][Discord] • 
 [Blog][Blog] • 
 [Twitter][Twitter]
+
+---
 
 </div>
 
@@ -148,3 +149,4 @@ Any **non-code/program content** (writeups, READMEs, descriptions) in this repos
 [cc-by-nc-sa]: https://creativecommons.org/licenses/by-nc-sa/4.0/
 [Non-Code License]: https://img.shields.io/badge/non--code%20license-CC%20BY--NC--SA%204.0-3cc4c7
 [Code License]: https://img.shields.io/badge/code%20license-AGPL--3.0-db67d2
+[Discord]: https://discord.gg/6gk7jhCgGX
