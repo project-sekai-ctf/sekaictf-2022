@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Project SEKAI CTF 2022</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="SekaiCTF 2022" />
+<meta property="og:description" content="SekaiCTF 2022 is yet another CTF contest brought to you by yet another CTF team." />
+<meta property="og:image" content="https://ProjectSEKAIctf.1a23.studio/twitter-card.png" />
+<meta property="og:type" content="website" />
+<link rel="shortcut icon" href="/files/adc871f25f4d7cdb7321ac32474c614c/sekai2_SEKAI_CTF_Square_Small.r.png">
+<script src="https://unpkg.com/@ungap/has-own@0.1.1/min.js"></script>
+<link rel="stylesheet" href="/themes/luna/static/assets/main.6e2cb990.css">
+<script type="text/javascript">
+        window.init = {
+            'urlRoot': "",
+            'csrfNonce': "44bec1a024cec235e3ae15f3ae4399edc4d51e37a41fe5ce1ed51131b060c9f6",
+            'userMode': "teams",
+            'smallIcon': "/files/adc871f25f4d7cdb7321ac32474c614c/sekai2_SEKAI_CTF_Square_Small.r.png",
+            'userId': 0,
+            'userName': null,
+            'userEmail': "None",
+            'teamId': null,
+            'teamName': null,
+            'start': 1664553600,
+            'end': 1664726400,
+            'themeSettings': {"cat_name_crypto": "Cryptography", "cat_name_forensics": "Forensics", "cat_name_misc": "Misc", "cat_name_ppc": "PPC", "cat_name_pwn": "Pwn", "cat_name_rev": "Reverse", "cat_name_web": "Web", "challenge_category_order": "", "challenge_order": "", "flag_placeholder": "SEKAI{\u2026}", "social_banner": "https://ProjectSEKAIctf.1a23.studio/twitter-card.png", "social_desc": "SekaiCTF 2022 is yet another CTF contest brought to you by yet another CTF team.", "social_link_icon": "mdi:github", "social_link_url": "https://github.com/project-sekai-ctf/sekaictf-2022", "tag_difficulty_1": "\u2b50", "tag_difficulty_2": "\u2b50\u2b50", "tag_difficulty_3": "\u2b50\u2b50\u2b50", "tag_difficulty_4": "\u2b50\u2b50\u2b50\u2b50", "tag_difficulty_5": "\u2b50\u2b50\u2b50\u2b50\u2b50"},
+        }
+    </script>
+</head>
+<body>
+<svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" style="position: absolute; visibility: hidden;">
+<filter id="primaryIconStroke" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feMorphology operator="dilate" radius="2 2" in="SourceGraphic" result="morphology" />
+<feMorphology operator="dilate" radius="3.5 3.5" in="SourceGraphic" result="morphology1" />
+<feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+<feFlood flood-color="#E0E0E0" flood-opacity="1" result="flood1" />
+<feComposite in="flood" in2="morphology" operator="in" result="composite" />
+<feComposite in="flood1" in2="morphology1" operator="in" result="composite1" />
+<feMerge result="merge">
+<feMergeNode in="composite1" />
+<feMergeNode in="composite" />
+<feMergeNode in="SourceGraphic" />
+</feMerge>
+</filter>
+<filter id="accentIconStroke" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feMorphology operator="dilate" radius="2 2" in="SourceGraphic" result="morphology" />
+<feMorphology operator="dilate" radius="3.5 3.5" in="SourceGraphic" result="morphology1" />
+<feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+<feFlood flood-color="#95FCDB" flood-opacity="1" result="flood1" />
+<feComposite in="flood" in2="morphology" operator="in" result="composite" />
+<feComposite in="flood1" in2="morphology1" operator="in" result="composite1" />
+<feMerge result="merge">
+<feMergeNode in="composite1" />
+<feMergeNode in="composite" />
+<feMergeNode in="SourceGraphic" />
+</feMerge>
+</filter>
+<filter id="chevronStroke" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feMorphology operator="dilate" radius="3 3" in="SourceGraphic" result="morphology" />
+<feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+<feComposite in="flood" in2="morphology" operator="in" result="composite2" />
+<feMerge result="merge">
+<feMergeNode in="composite2" />
+<feMergeNode in="SourceGraphic" />
+</feMerge>
+</filter>
+<linearGradient id="primaryGradient" gradientTransform="rotate(90)">
+<stop offset="0%" stop-color="#EB53B8" stop-opacity="1" />
+<stop offset="100%" stop-color="#EE79F8" stop-opacity="1" />
+</linearGradient>
+</svg>
+<div class="triangleContainer">
+<div class="controlRow">
+<div class="titleContainer">
+<button class="button iconButton" id="backButton" aria-label="Go back" title="Go back">
+<iconify-icon icon="icon-park-solid:back"></iconify-icon>
+</button>
+<div class="titleGroup">
+<h1 class="title">Users</h1>
+<h2 class="subtitle"><span>tr0uble</span></h2>
+</div>
+</div>
+<div class="filler"></div>
+<button class="button shade iconButton menuButton buttonNotification" id="mainMenuButton" aria-label="Main menu" title="Main Menu">
+<iconify-icon icon="ic:baseline-menu"></iconify-icon>
+</button>
+<dialog class="modal fit" id="mainMenuModal">
+<h2 class="modalHeader">Menu</h2>
+<div class="modalBody">
+<a class="button textButton shade primaryIcon" href="/rules">
+<iconify-icon icon="ic:baseline-contact-page"></iconify-icon>
+<span>Rules</span>
+</a>
+<a class="button textButton shade primaryIcon" href="/teams">
+<iconify-icon icon="ic:baseline-people-alt"></iconify-icon>
+<span>Teams</span>
+</a>
+<a class="button textButton shade primaryIcon" href="/users">
+<iconify-icon icon="ic:baseline-person"></iconify-icon>
+<span>Users</span>
+</a>
+<a class="button textButton shade primaryIcon" href="/scoreboard">
+<iconify-icon icon="mdi:podium"></iconify-icon>
+<span>Ranking</span>
+</a>
+<a class="button textButton alternate" href="/">
+<iconify-icon icon="ic:baseline-home"></iconify-icon>
+<span>Home</span>
+</a>
+<a class="button textButton alternate" id="mainMenuTitleBtn" href="/">
+<iconify-icon icon="icon-park-solid:back"></iconify-icon>
+<span>Title</span>
+</a>
+<a class="button textButton alternate" id="mainMenuTitleBtn" href="/challenges">
+<iconify-icon icon="fluent:music-note-2-24-filled"></iconify-icon>
+<span>Challenges</span>
+</a><a class="button textButton alternate" id="mainMenuTitleBtn" href="https://github.com/project-sekai-ctf/sekaictf-2022/">
+<iconify-icon icon="mdi:github"></iconify-icon>
+<span>GitHub</span>
+</a></div>
+<div class="modalFooter">
+<button class="button textButton shade" id="mainMenuClose">
+<span>Close</span>
+</button>
+</div>
+</dialog>
+</div>
+<div class="tabs" id="tabbedView">
+<div class="filler"></div>
+<button class="tab active" data-target="tabSolves">Solves</button>
+<button class="tab" data-target="tabBreakdown">Breakdown</button>
+<button class="tab" data-target="tabTimeline">Timeline</button>
+<div class="filler"></div>
+</div>
+<div class="contentWrapper tabbed">
+<div x-data="UserGraphs" style="height: 100%;">
+<div class="frameContentWrap">
+</div>
+<div class="tabPane" id="tabSolves">
+<div class="frameContentWrapper">
+<div class="profileDetailGroup">
+<div class="profileIcon">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/3e88b1b6fb77facd6a6862451fca7dd4?d=404" data-fallback="https://avatars.dicebear.com/api/initials/tr0uble.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="profileMeta">
+<div class="profileMetaRow">
+<div class="profileMetaBox">
+tr0uble
+</div>
+</div>
+<div class="profileMetaRow">
+<label class="chip tall" id="teamLabel">Team</label>
+<div class="profileMetaBox">radiv</div>
+<a href="/teams/364" class="button textButton shade small">
+<span>View team</span>
+</a>
+</div>
+</div>
+<div class="profileRank">
+<label class="chip">Rank</label>
+<div class="profileRankNumber">92</div>
+</div>
+</div>
+<h3 class="sectionTitle">Solves</h3>
+<div class="info" style="justify-content: center;">No solves yet.</div>
+</div>
+<div class="totalScore">
+<div class="frameContentWrapper">
+<span class="totalScorePrompt">Total score</span>
+<span class="totalScoreDisplay">
+<span class="totalScoreValue">1265</span>&nbsp;<span class="totalScoreP">P</span>
+</span>
+</div>
+</div>
+</div>
+<div class="tabPane hidden" id="tabBreakdown">
+<div class="frameContentWrapper progressBarCharts">
+<div class="info" style="justify-content: center;">No solves yet.</div>
+</div>
+</div>
+<div class="tabPane hidden" id="tabTimeline">
+<div class="chartContainer">
+<div class="info" style="justify-content: center;">No solves yet.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script defer type="module" src="/themes/luna/static/assets/duration.c050dc80.js"></script><script defer type="module" src="/themes/luna/static/assets/echarts.4cc66d9c.js"></script><script defer type="module" src="/themes/luna/static/assets/notificationCounter.4f4e1e9f.js"></script><script defer type="module" src="/themes/luna/static/assets/base.982ab451.js"></script>
+<style>
+    :root {
+        --icon-wall: url("/themes/luna/static/img/assets/icon-wall.svg?d=7f25851e");
+        --triangular-bg: url("/themes/luna/static/img/triangular-bg.svg?d=7f25851e");
+        --halftone-tail: url("/themes/luna/static/img/halftone-tail.svg?d=7f25851e");
+        --stripe-border: url("/themes/luna/static/img/stripe-border.svg?d=7f25851e");
+    }
+</style>
+<script>
+    window.USER = {"id": 1236, "name": "tr0uble"};
+</script>
+<script defer type="module" src="/themes/luna/static/assets/module.esm.860ebcbd.js"></script><script defer type="module" src="/themes/luna/static/assets/base.982ab451.js"></script><script defer type="module" src="/themes/luna/static/assets/userscore.dd133bc1.js"></script><script defer type="module" src="/themes/luna/static/assets/duration.c050dc80.js"></script><script defer type="module" src="/themes/luna/static/assets/echarts.4cc66d9c.js"></script><script defer type="module" src="/themes/luna/static/assets/notificationCounter.4f4e1e9f.js"></script><script defer type="module" src="/themes/luna/static/assets/scoreboard.3d9287d0.js"></script><script defer type="module" src="/themes/luna/static/assets/user_profile.d63103c5.js"></script>
+<style>
+        body {
+            --halftone-bg: url("/themes/luna/static/img/halftoneButtonBg.svg?d=7f25851e");
+            --halftone-bg-white: url("/themes/luna/static/img/halftoneButtonBgWhite.svg?d=7f25851e");
+            --halftone-bg-white-25: url("/themes/luna/static/img/halftoneButtonBgWhite25.svg?d=7f25851e");
+        }
+    </style>
+</body>
+</html>

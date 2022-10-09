@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T13:47:10+00:00", "type": "correct", "challenge_id": 14, "team": {"name": "MSEC_ADC", "id": 1269}, "challenge": {"category": "Pwn", "value": 385, "name": "Save Me", "id": 14}, "id": 3807, "user": {"name": "Icefrog2000", "id": 2787}}], "meta": {"count": 1}}

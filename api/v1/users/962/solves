@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T11:11:09+00:00", "type": "correct", "challenge_id": 46, "team": {"name": "TeamZ", "id": 336}, "challenge": {"category": "Misc", "value": 39, "name": "\u25bb Survey", "id": 46}, "id": 6147, "user": {"name": "chaoticentropy", "id": 962}}], "meta": {"count": 1}}

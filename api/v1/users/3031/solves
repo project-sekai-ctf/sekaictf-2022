@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T22:00:26+00:00", "type": "correct", "challenge_id": 44, "team": {"name": "SIGINT", "id": 405}, "challenge": {"category": "Reverse", "value": 100, "name": "Perfect Match X-treme", "id": 44}, "id": 4858, "user": {"name": "chiv", "id": 3031}}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T03:01:41+00:00", "type": "correct", "challenge_id": 5, "team": {"name": "Meta", "id": 302}, "challenge": {"category": "Forensics", "value": 100, "name": "Broken Converter", "id": 5}, "id": 5208, "user": {"name": "ardx", "id": 521}}], "meta": {"count": 1}}

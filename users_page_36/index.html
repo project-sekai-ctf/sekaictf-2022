@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Project SEKAI CTF 2022</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="SekaiCTF 2022" />
+<meta property="og:description" content="SekaiCTF 2022 is yet another CTF contest brought to you by yet another CTF team." />
+<meta property="og:image" content="https://ProjectSEKAIctf.1a23.studio/twitter-card.png" />
+<meta property="og:type" content="website" />
+<link rel="shortcut icon" href="/files/adc871f25f4d7cdb7321ac32474c614c/sekai2_SEKAI_CTF_Square_Small.r.png">
+<script src="https://unpkg.com/@ungap/has-own@0.1.1/min.js"></script>
+<link rel="stylesheet" href="/themes/luna/static/assets/main.6e2cb990.css">
+<script type="text/javascript">
+        window.init = {
+            'urlRoot': "",
+            'csrfNonce': "44bec1a024cec235e3ae15f3ae4399edc4d51e37a41fe5ce1ed51131b060c9f6",
+            'userMode': "teams",
+            'smallIcon': "/files/adc871f25f4d7cdb7321ac32474c614c/sekai2_SEKAI_CTF_Square_Small.r.png",
+            'userId': 0,
+            'userName': null,
+            'userEmail': "None",
+            'teamId': null,
+            'teamName': null,
+            'start': 1664553600,
+            'end': 1664726400,
+            'themeSettings': {"cat_name_crypto": "Cryptography", "cat_name_forensics": "Forensics", "cat_name_misc": "Misc", "cat_name_ppc": "PPC", "cat_name_pwn": "Pwn", "cat_name_rev": "Reverse", "cat_name_web": "Web", "challenge_category_order": "", "challenge_order": "", "flag_placeholder": "SEKAI{\u2026}", "social_banner": "https://ProjectSEKAIctf.1a23.studio/twitter-card.png", "social_desc": "SekaiCTF 2022 is yet another CTF contest brought to you by yet another CTF team.", "social_link_icon": "mdi:github", "social_link_url": "https://github.com/project-sekai-ctf/sekaictf-2022", "tag_difficulty_1": "\u2b50", "tag_difficulty_2": "\u2b50\u2b50", "tag_difficulty_3": "\u2b50\u2b50\u2b50", "tag_difficulty_4": "\u2b50\u2b50\u2b50\u2b50", "tag_difficulty_5": "\u2b50\u2b50\u2b50\u2b50\u2b50"},
+        }
+    </script>
+</head>
+<body>
+<svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" style="position: absolute; visibility: hidden;">
+<filter id="primaryIconStroke" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feMorphology operator="dilate" radius="2 2" in="SourceGraphic" result="morphology" />
+<feMorphology operator="dilate" radius="3.5 3.5" in="SourceGraphic" result="morphology1" />
+<feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+<feFlood flood-color="#E0E0E0" flood-opacity="1" result="flood1" />
+<feComposite in="flood" in2="morphology" operator="in" result="composite" />
+<feComposite in="flood1" in2="morphology1" operator="in" result="composite1" />
+<feMerge result="merge">
+<feMergeNode in="composite1" />
+<feMergeNode in="composite" />
+<feMergeNode in="SourceGraphic" />
+</feMerge>
+</filter>
+<filter id="accentIconStroke" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feMorphology operator="dilate" radius="2 2" in="SourceGraphic" result="morphology" />
+<feMorphology operator="dilate" radius="3.5 3.5" in="SourceGraphic" result="morphology1" />
+<feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+<feFlood flood-color="#95FCDB" flood-opacity="1" result="flood1" />
+<feComposite in="flood" in2="morphology" operator="in" result="composite" />
+<feComposite in="flood1" in2="morphology1" operator="in" result="composite1" />
+<feMerge result="merge">
+<feMergeNode in="composite1" />
+<feMergeNode in="composite" />
+<feMergeNode in="SourceGraphic" />
+</feMerge>
+</filter>
+<filter id="chevronStroke" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feMorphology operator="dilate" radius="3 3" in="SourceGraphic" result="morphology" />
+<feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+<feComposite in="flood" in2="morphology" operator="in" result="composite2" />
+<feMerge result="merge">
+<feMergeNode in="composite2" />
+<feMergeNode in="SourceGraphic" />
+</feMerge>
+</filter>
+<linearGradient id="primaryGradient" gradientTransform="rotate(90)">
+<stop offset="0%" stop-color="#EB53B8" stop-opacity="1" />
+<stop offset="100%" stop-color="#EE79F8" stop-opacity="1" />
+</linearGradient>
+</svg>
+<div class="triangleContainer">
+<div class="controlRow">
+<div class="titleContainer">
+<button class="button iconButton" id="backButton" aria-label="Go back" title="Go back">
+<iconify-icon icon="icon-park-solid:back"></iconify-icon>
+</button>
+<div class="titleGroup">
+<h1 class="title">Users</h1>
+<h2 class="subtitle"><span>Users list</span></h2>
+</div>
+</div>
+<div class="filler"></div>
+<button class="button shade iconButton menuButton buttonNotification" id="mainMenuButton" aria-label="Main menu" title="Main Menu">
+<iconify-icon icon="ic:baseline-menu"></iconify-icon>
+</button>
+<dialog class="modal fit" id="mainMenuModal">
+<h2 class="modalHeader">Menu</h2>
+<div class="modalBody">
+<a class="button textButton shade primaryIcon" href="/rules">
+<iconify-icon icon="ic:baseline-contact-page"></iconify-icon>
+<span>Rules</span>
+</a>
+<a class="button textButton shade primaryIcon" href="/teams">
+<iconify-icon icon="ic:baseline-people-alt"></iconify-icon>
+<span>Teams</span>
+</a>
+<a class="button textButton shade primaryIcon" href="/users">
+<iconify-icon icon="ic:baseline-person"></iconify-icon>
+<span>Users</span>
+</a>
+<a class="button textButton shade primaryIcon" href="/scoreboard">
+<iconify-icon icon="mdi:podium"></iconify-icon>
+<span>Ranking</span>
+</a>
+<a class="button textButton alternate" href="/">
+<iconify-icon icon="ic:baseline-home"></iconify-icon>
+<span>Home</span>
+</a>
+<a class="button textButton alternate" id="mainMenuTitleBtn" href="/">
+<iconify-icon icon="icon-park-solid:back"></iconify-icon>
+<span>Title</span>
+</a>
+<a class="button textButton alternate" id="mainMenuTitleBtn" href="/challenges">
+<iconify-icon icon="fluent:music-note-2-24-filled"></iconify-icon>
+<span>Challenges</span>
+</a><a class="button textButton alternate" id="mainMenuTitleBtn" href="https://github.com/project-sekai-ctf/sekaictf-2022/">
+<iconify-icon icon="mdi:github"></iconify-icon>
+<span>GitHub</span>
+</a></div>
+<div class="modalFooter">
+<button class="button textButton shade" id="mainMenuClose">
+<span>Close</span>
+</button>
+</div>
+</dialog>
+</div>
+<div class="contentWrapper">
+<div class="frameContentWrapper">
+<div class="grid">
+<a href="/users/1692" class="gridCell">
+<div class="cellHeader">SriShashank</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/487084bcd231a33edb2372e2d13c8c76?d=404" data-fallback="https://avatars.dicebear.com/api/initials/SriShashank.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+<em>No team</em>
+</div>
+</a>
+<a href="/users/1693" class="gridCell">
+<div class="cellHeader">PracticeUser</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/58751a997daefe4bb47e9a21dced00c1?d=404" data-fallback="https://avatars.dicebear.com/api/initials/PracticeUser.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+PracticeTeam001
+</div>
+</a>
+<a href="/users/1694" class="gridCell">
+<div class="cellHeader">iguesssolax</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/fc0b186124d62826a4c473dacfd74d49?d=404" data-fallback="https://avatars.dicebear.com/api/initials/iguesssolax.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+ENOENTHUSIASM
+</div>
+</a>
+<a href="/users/1695" class="gridCell">
+<div class="cellHeader">Phyllalix</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/9d0cadd76dac90070d0621530ea014fd?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Phyllalix.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+Cryptis
+</div>
+</a>
+<a href="/users/1696" class="gridCell">
+<div class="cellHeader">DeltaJ</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/7d3cb64596e37acd48d31160fbb8f4ed?d=404" data-fallback="https://avatars.dicebear.com/api/initials/DeltaJ.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+DeltaJ
+</div>
+</a>
+<a href="/users/1697" class="gridCell">
+<div class="cellHeader">Grivanenko</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/6deaf3e1f156a4cf35ff1c933b9d137c?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Grivanenko.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+CTF_505
+</div>
+</a>
+<a href="/users/1698" class="gridCell">
+<div class="cellHeader">squarebit</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/1d36eb7b689ae431df8ccd32a932c1bb?d=404" data-fallback="https://avatars.dicebear.com/api/initials/squarebit.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+WAKE ME UP WHEN LAPRAK ENDS
+</div>
+</a>
+<a href="/users/1699" class="gridCell">
+<div class="cellHeader">evilgigachad</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/287871ffdfc8d967d49409c6959ad981?d=404" data-fallback="https://avatars.dicebear.com/api/initials/evilgigachad.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+CTF_505
+</div>
+</a>
+<a href="/users/1700" class="gridCell">
+<div class="cellHeader">CoderZClub</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/0a86a0a1b5e85415c4b807c705c648c3?d=404" data-fallback="https://avatars.dicebear.com/api/initials/CoderZClub.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+CoderZClub
+</div>
+</a>
+<a href="/users/1701" class="gridCell">
+<div class="cellHeader">arctakano</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/e8d271c8067ba75a8df806ba96ad9599?d=404" data-fallback="https://avatars.dicebear.com/api/initials/arctakano.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+pemulahehe
+</div>
+</a>
+<a href="/users/1702" class="gridCell">
+<div class="cellHeader">wolfie</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/7848b49063861fcfef15e41004dd308f?d=404" data-fallback="https://avatars.dicebear.com/api/initials/wolfie.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+wolf
+</div>
+</a>
+<a href="/users/1703" class="gridCell">
+<div class="cellHeader">passc0de</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/b2ccffe34c42125e4705268e44285931?d=404" data-fallback="https://avatars.dicebear.com/api/initials/passc0de.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+4o1
+</div>
+</a>
+<a href="/users/1704" class="gridCell">
+<div class="cellHeader">cp04042k</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/87bb2cee47d0e9ccf3b3d9e3019a9e27?d=404" data-fallback="https://avatars.dicebear.com/api/initials/cp04042k.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+Green Onions
+</div>
+</a>
+<a href="/users/1705" class="gridCell">
+<div class="cellHeader">Amirtha_Sowmya</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/f303643704d3565f33ed39f2a6f32cca?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Amirtha_Sowmya.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+Secure+
+</div>
+</a>
+<a href="/users/1706" class="gridCell">
+<div class="cellHeader">z2t</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/5e5694b48fbdabf24309fdce480002b9?d=404" data-fallback="https://avatars.dicebear.com/api/initials/z2t.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+Breakfast
+</div>
+</a>
+<a href="/users/1707" class="gridCell">
+<div class="cellHeader">KMA.L3N0V0</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/139693c1bdbd86981f218315e5cfae07?d=404" data-fallback="https://avatars.dicebear.com/api/initials/KMA.L3N0V0.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+KCSC
+</div>
+</a>
+<a href="/users/1708" class="gridCell">
+<div class="cellHeader">Subramanyam challa</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/fbecdc8419cb30067502d6fa00706974?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Subramanyam+challa.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+Secure+
+</div>
+</a>
+<a href="/users/1709" class="gridCell">
+<div class="cellHeader">Nguyenndevuit</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/1e1a64b1803bdf0255fc0b0171ef5171?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Nguyenndevuit.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+<em>No team</em>
+</div>
+</a>
+<a href="/users/1710" class="gridCell">
+<div class="cellHeader">minhkhoi1026</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/e8437687eb27030004aec2add7bdba43?d=404" data-fallback="https://avatars.dicebear.com/api/initials/minhkhoi1026.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+Breakfast
+</div>
+</a>
+<a href="/users/1711" class="gridCell">
+<div class="cellHeader">borekaenxd97</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/65bea4301aac64284b08a179d4a26b61?d=404" data-fallback="https://avatars.dicebear.com/api/initials/borekaenxd97.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+SiberAtay
+</div>
+</a>
+<a href="/users/1712" class="gridCell">
+<div class="cellHeader">AFKL</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/7e0f346c9d7025daf3b7ff7cf9044e4f?d=404" data-fallback="https://avatars.dicebear.com/api/initials/AFKL.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+<em>No team</em>
+</div>
+</a>
+<a href="/users/1713" class="gridCell">
+<div class="cellHeader">kgjoylcy</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/8c3389d33f01a86b2ad11a30851a4394?d=404" data-fallback="https://avatars.dicebear.com/api/initials/kgjoylcy.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+kgjoylcy
+</div>
+</a>
+<a href="/users/1714" class="gridCell">
+<div class="cellHeader">kgrzk2</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/9f0e1f5b2897b3a639dd3e01201a6267?d=404" data-fallback="https://avatars.dicebear.com/api/initials/kgrzk2.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+kgrzk2
+</div>
+</a>
+<a href="/users/1715" class="gridCell">
+<div class="cellHeader">FrakenboK</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/8d0d5b181e5c95c3f41d22cd9558e0d8?d=404" data-fallback="https://avatars.dicebear.com/api/initials/FrakenboK.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+FrakenboK
+</div>
+</a>
+<a href="/users/1716" class="gridCell">
+<div class="cellHeader">1259iknowthat</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/f96c9a743bfe7bb24ca105a5045dc9ac?d=404" data-fallback="https://avatars.dicebear.com/api/initials/1259iknowthat.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+Green Onions
+</div>
+</a>
+<a href="/users/1717" class="gridCell">
+<div class="cellHeader">bizzybee</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/30946dbc159167964ec6f91345635d8a?d=404" data-fallback="https://avatars.dicebear.com/api/initials/bizzybee.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+<em>No team</em>
+</div>
+</a>
+<a href="/users/1718" class="gridCell">
+<div class="cellHeader">WalterDrake</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/d91e962ca637f145a317309a674d774b?d=404" data-fallback="https://avatars.dicebear.com/api/initials/WalterDrake.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+Green Onions
+</div>
+</a>
+<a href="/users/1719" class="gridCell">
+<div class="cellHeader">Giak77</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/9beb5b749ed516ccc55677753bb2158b?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Giak77.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+Rubi di Cubrik
+</div>
+</a>
+<a href="/users/1720" class="gridCell">
+<div class="cellHeader">trog</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/e2f3bde41f54d014e9e8986191d4e6b7?d=404" data-fallback="https://avatars.dicebear.com/api/initials/trog.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+Trog
+</div>
+</a>
+<a href="/users/1721" class="gridCell">
+<div class="cellHeader">ganmo</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/f1656bf3b107211b4ea9c2d852e0b5b7?d=404" data-fallback="https://avatars.dicebear.com/api/initials/ganmo.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+ganmo
+</div>
+</a>
+<a href="/users/1722" class="gridCell">
+<div class="cellHeader">J1W0N</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/0bc4b6ed5ed5c6899b78849f5deee182?d=404" data-fallback="https://avatars.dicebear.com/api/initials/J1W0N.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+J1W0N
+</div>
+</a>
+<a href="/users/1723" class="gridCell">
+<div class="cellHeader">Cyb0rG</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/cf76286a9d5e064f8ce4cc3501a5acc8?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Cyb0rG.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+<em>No team</em>
+</div>
+</a>
+<a href="/users/1724" class="gridCell">
+<div class="cellHeader">Trumpiter</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/1756d6e4df52acefb458881ea28b93b8?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Trumpiter.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+<em>No team</em>
+</div>
+</a>
+<a href="/users/1725" class="gridCell">
+<div class="cellHeader">arkango</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/3c45882735394ef1c3f61a9f803886a3?d=404" data-fallback="https://avatars.dicebear.com/api/initials/arkango.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+M0NT3C4RLO
+</div>
+</a>
+<a href="/users/1726" class="gridCell">
+<div class="cellHeader">spex</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/9a7e8be05935d41c612455cbcd45ab7b?d=404" data-fallback="https://avatars.dicebear.com/api/initials/spex.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+ELHACK
+</div>
+</a>
+<a href="/users/1727" class="gridCell">
+<div class="cellHeader">try0n14</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/6e6abe689cc10a861eb58d828fb01e2e?d=404" data-fallback="https://avatars.dicebear.com/api/initials/try0n14.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+ELHACK
+</div>
+</a>
+<a href="/users/1728" class="gridCell">
+<div class="cellHeader">wesserboy</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/03fa28a855c4c648625d4a5e58be42f3?d=404" data-fallback="https://avatars.dicebear.com/api/initials/wesserboy.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+Wesserboy
+</div>
+</a>
+<a href="/users/1729" class="gridCell">
+<div class="cellHeader">Jacje</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/827de2b2fa1538e6fee215331c8a8031?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Jacje.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+Wesserboy
+</div>
+</a>
+<a href="/users/1730" class="gridCell">
+<div class="cellHeader">idek</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/1654268f92a93164fbe6d450f22d68e3?d=404" data-fallback="https://avatars.dicebear.com/api/initials/idek.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+idek
+</div>
+</a>
+<a href="/users/1731" class="gridCell">
+<div class="cellHeader">Purple5003</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/27129e94627bd878fe7d0dcb9fa7ae64?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Purple5003.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+Dapurpleteam
+</div>
+</a>
+<a href="/users/1732" class="gridCell">
+<div class="cellHeader">NemNem</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/0005b29ca5a9947d7b91a2a2cee5e3a5?d=404" data-fallback="https://avatars.dicebear.com/api/initials/NemNem.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+VN_MSEC
+</div>
+</a>
+<a href="/users/1733" class="gridCell">
+<div class="cellHeader">Rumberkren</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/80c892518cc6e6114ac869da08e880bf?d=404" data-fallback="https://avatars.dicebear.com/api/initials/Rumberkren.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+been chilling
+</div>
+</a>
+<a href="/users/1734" class="gridCell">
+<div class="cellHeader">falc8000</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/e9ed09054aa1bf332c55dc85e792e368?d=404" data-fallback="https://avatars.dicebear.com/api/initials/falc8000.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+JumpingCats4000
+</div>
+</a>
+<a href="/users/1735" class="gridCell">
+<div class="cellHeader">houseoforion</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/04487d637cf085cc503c961c0cb9e503?d=404" data-fallback="https://avatars.dicebear.com/api/initials/houseoforion.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+CSUI
+</div>
+</a>
+<a href="/users/1736" class="gridCell">
+<div class="cellHeader">MeepStryker</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/5e1758b83d36f469c0be9c7a996a7452?d=404" data-fallback="https://avatars.dicebear.com/api/initials/MeepStryker.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+contagion2rev
+</div>
+</a>
+<a href="/users/1737" class="gridCell">
+<div class="cellHeader">duckduck</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/84090317eeaed4d1c4191e8407b195b8?d=404" data-fallback="https://avatars.dicebear.com/api/initials/duckduck.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+been chilling
+</div>
+</a>
+<a href="/users/1738" class="gridCell">
+<div class="cellHeader">rainb0w</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/bcad2faed75857cf080272e32bff8c08?d=404" data-fallback="https://avatars.dicebear.com/api/initials/rainb0w.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+test_team
+</div>
+</a>
+<a href="/users/1739" class="gridCell">
+<div class="cellHeader">louisR</div>
+<div class="cellBody">
+<img width="80" height="80" class="cellBodyIcon" src="https://www.gravatar.com/avatar/55e6eccb8d4d1cf1784f6719d0233884?d=404" data-fallback="https://avatars.dicebear.com/api/initials/louisR.svg?backgroundColorLevel=800" onerror="this.src = this.dataset.fallback;this.onerror='';">
+</div>
+<div class="cellFooter">
+Skid4lyfe
+</div>
+</a>
+</div>
+<div class="pageCounter">
+<a class="pageCounterDot " href="/users_page_1" title="Page 1" aria-label="Page 1"></a>
+<a class="pageCounterDot " href="/users_page_2" title="Page 2" aria-label="Page 2"></a>
+<a class="pageCounterDot " href="/users_page_3" title="Page 3" aria-label="Page 3"></a>
+<a class="pageCounterDot " href="/users_page_4" title="Page 4" aria-label="Page 4"></a>
+<a class="pageCounterDot " href="/users_page_5" title="Page 5" aria-label="Page 5"></a>
+<a class="pageCounterDot " href="/users_page_6" title="Page 6" aria-label="Page 6"></a>
+<a class="pageCounterDot " href="/users_page_7" title="Page 7" aria-label="Page 7"></a>
+<a class="pageCounterDot " href="/users_page_8" title="Page 8" aria-label="Page 8"></a>
+<a class="pageCounterDot " href="/users_page_9" title="Page 9" aria-label="Page 9"></a>
+<a class="pageCounterDot " href="/users_page_10" title="Page 10" aria-label="Page 10"></a>
+<a class="pageCounterDot " href="/users_page_11" title="Page 11" aria-label="Page 11"></a>
+<a class="pageCounterDot " href="/users_page_12" title="Page 12" aria-label="Page 12"></a>
+<a class="pageCounterDot " href="/users_page_13" title="Page 13" aria-label="Page 13"></a>
+<a class="pageCounterDot " href="/users_page_14" title="Page 14" aria-label="Page 14"></a>
+<a class="pageCounterDot " href="/users_page_15" title="Page 15" aria-label="Page 15"></a>
+<a class="pageCounterDot " href="/users_page_16" title="Page 16" aria-label="Page 16"></a>
+<a class="pageCounterDot " href="/users_page_17" title="Page 17" aria-label="Page 17"></a>
+<a class="pageCounterDot " href="/users_page_18" title="Page 18" aria-label="Page 18"></a>
+<a class="pageCounterDot " href="/users_page_19" title="Page 19" aria-label="Page 19"></a>
+<a class="pageCounterDot " href="/users_page_20" title="Page 20" aria-label="Page 20"></a>
+<a class="pageCounterDot " href="/users_page_21" title="Page 21" aria-label="Page 21"></a>
+<a class="pageCounterDot " href="/users_page_22" title="Page 22" aria-label="Page 22"></a>
+<a class="pageCounterDot " href="/users_page_23" title="Page 23" aria-label="Page 23"></a>
+<a class="pageCounterDot " href="/users_page_24" title="Page 24" aria-label="Page 24"></a>
+<a class="pageCounterDot " href="/users_page_25" title="Page 25" aria-label="Page 25"></a>
+<a class="pageCounterDot " href="/users_page_26" title="Page 26" aria-label="Page 26"></a>
+<a class="pageCounterDot " href="/users_page_27" title="Page 27" aria-label="Page 27"></a>
+<a class="pageCounterDot " href="/users_page_28" title="Page 28" aria-label="Page 28"></a>
+<a class="pageCounterDot " href="/users_page_29" title="Page 29" aria-label="Page 29"></a>
+<a class="pageCounterDot " href="/users_page_30" title="Page 30" aria-label="Page 30"></a>
+<a class="pageCounterDot " href="/users_page_31" title="Page 31" aria-label="Page 31"></a>
+<a class="pageCounterDot " href="/users_page_32" title="Page 32" aria-label="Page 32"></a>
+<a class="pageCounterDot " href="/users_page_33" title="Page 33" aria-label="Page 33"></a>
+<a class="pageCounterDot " href="/users_page_34" title="Page 34" aria-label="Page 34"></a>
+<a class="pageCounterDot " href="/users_page_35" title="Page 35" aria-label="Page 35"></a>
+<a class="pageCounterDot active" href="/users_page_36" title="Page 36" aria-label="Page 36"></a>
+<a class="pageCounterDot " href="/users_page_37" title="Page 37" aria-label="Page 37"></a>
+<a class="pageCounterDot " href="/users_page_38" title="Page 38" aria-label="Page 38"></a>
+<a class="pageCounterDot " href="/users_page_39" title="Page 39" aria-label="Page 39"></a>
+<a class="pageCounterDot " href="/users_page_40" title="Page 40" aria-label="Page 40"></a>
+<a class="pageCounterDot " href="/users_page_41" title="Page 41" aria-label="Page 41"></a>
+<a class="pageCounterDot " href="/users_page_42" title="Page 42" aria-label="Page 42"></a>
+<a class="pageCounterDot " href="/users_page_43" title="Page 43" aria-label="Page 43"></a>
+<a class="pageCounterDot " href="/users_page_44" title="Page 44" aria-label="Page 44"></a>
+<a class="pageCounterDot " href="/users_page_45" title="Page 45" aria-label="Page 45"></a>
+<a class="pageCounterDot " href="/users_page_46" title="Page 46" aria-label="Page 46"></a>
+<a class="pageCounterDot " href="/users_page_47" title="Page 47" aria-label="Page 47"></a>
+<a class="pageCounterDot " href="/users_page_48" title="Page 48" aria-label="Page 48"></a>
+<a class="pageCounterDot " href="/users_page_49" title="Page 49" aria-label="Page 49"></a>
+<a class="pageCounterDot " href="/users_page_50" title="Page 50" aria-label="Page 50"></a>
+<a class="pageCounterDot " href="/users_page_51" title="Page 51" aria-label="Page 51"></a>
+<a class="pageCounterDot " href="/users_page_52" title="Page 52" aria-label="Page 52"></a>
+<a class="pageCounterDot " href="/users_page_53" title="Page 53" aria-label="Page 53"></a>
+<a class="pageCounterDot " href="/users_page_54" title="Page 54" aria-label="Page 54"></a>
+<a class="pageCounterDot " href="/users_page_55" title="Page 55" aria-label="Page 55"></a>
+<a class="pageCounterDot " href="/users_page_56" title="Page 56" aria-label="Page 56"></a>
+<a class="pageCounterDot " href="/users_page_57" title="Page 57" aria-label="Page 57"></a>
+<a class="pageCounterDot " href="/users_page_58" title="Page 58" aria-label="Page 58"></a>
+<a class="pageCounterDot " href="/users_page_59" title="Page 59" aria-label="Page 59"></a>
+<a class="pageCounterDot " href="/users_page_60" title="Page 60" aria-label="Page 60"></a>
+<a class="pageCounterDot " href="/users_page_61" title="Page 61" aria-label="Page 61"></a>
+<a class="pageCounterDot " href="/users_page_62" title="Page 62" aria-label="Page 62"></a>
+<a class="pageCounterDot " href="/users_page_63" title="Page 63" aria-label="Page 63"></a>
+<a class="pageCounterDot " href="/users_page_64" title="Page 64" aria-label="Page 64"></a>
+<a class="pageCounterDot " href="/users_page_65" title="Page 65" aria-label="Page 65"></a>
+<a class="pageCounterDot " href="/users_page_66" title="Page 66" aria-label="Page 66"></a>
+<a class="pageCounterDot " href="/users_page_67" title="Page 67" aria-label="Page 67"></a>
+<a class="pageCounterDot " href="/users_page_68" title="Page 68" aria-label="Page 68"></a>
+<a class="pageCounterDot " href="/users_page_69" title="Page 69" aria-label="Page 69"></a>
+<a class="pageCounterDot " href="/users_page_70" title="Page 70" aria-label="Page 70"></a>
+<a class="pageCounterDot " href="/users_page_71" title="Page 71" aria-label="Page 71"></a>
+</div>
+</div>
+<a class="pageIndicator previousPage" href="/users_page_35">
+<img src="/themes/luna/static/img/left-chevron.svg?d=b22c63e8" alt="Previous page" />
+</a>
+<a class="pageIndicator nextPage" href="/users_page_37">
+<img src="/themes/luna/static/img/right-chevron.svg?d=b22c63e8" alt="Next page" />
+</a>
+</div>
+</div>
+<script defer type="module" src="/themes/luna/static/assets/duration.c050dc80.js"></script><script defer type="module" src="/themes/luna/static/assets/echarts.4cc66d9c.js"></script><script defer type="module" src="/themes/luna/static/assets/notificationCounter.4f4e1e9f.js"></script><script defer type="module" src="/themes/luna/static/assets/base.982ab451.js"></script>
+<style>
+    :root {
+        --icon-wall: url("/themes/luna/static/img/assets/icon-wall.svg?d=b22c63e8");
+        --triangular-bg: url("/themes/luna/static/img/triangular-bg.svg?d=b22c63e8");
+        --halftone-tail: url("/themes/luna/static/img/halftone-tail.svg?d=b22c63e8");
+    }
+</style>
+<style>
+        body {
+            --halftone-bg: url("/themes/luna/static/img/halftoneButtonBg.svg?d=b22c63e8");
+            --halftone-bg-white: url("/themes/luna/static/img/halftoneButtonBgWhite.svg?d=b22c63e8");
+            --halftone-bg-white-25: url("/themes/luna/static/img/halftoneButtonBgWhite25.svg?d=b22c63e8");
+        }
+    </style>
+</body>
+</html>

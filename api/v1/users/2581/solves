@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T03:43:14+00:00", "type": "correct", "challenge_id": 1, "team": {"name": "The Hive", "id": 1137}, "challenge": {"category": "Misc", "value": 39, "name": "\u25b6 Sanity Check", "id": 1}, "id": 2515, "user": {"name": "LarvalHacker", "id": 2581}}], "meta": {"count": 1}}

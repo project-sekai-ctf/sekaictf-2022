@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T08:04:33+00:00", "type": "correct", "challenge_id": 10, "team": {"name": "you are not cbfadal!!", "id": 588}, "challenge": {"category": "Cryptography", "value": 100, "name": "Time Capsule", "id": 10}, "id": 3086, "user": {"name": "swusjask", "id": 1657}}], "meta": {"count": 1}}

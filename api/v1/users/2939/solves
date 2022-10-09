@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T16:39:23+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "traP", "id": 691}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 4203, "user": {"name": "mojashi", "id": 2939}}], "meta": {"count": 1}}

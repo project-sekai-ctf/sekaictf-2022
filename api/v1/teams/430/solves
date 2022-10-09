@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T16:03:40+00:00", "type": "correct", "challenge_id": 1, "team": {"name": "T1-1E_130ys", "id": 430}, "challenge": {"category": "Misc", "value": 39, "name": "\u25b6 Sanity Check", "id": 1}, "id": 20, "user": {"name": "timoxoszt", "id": 1218}}], "meta": {"count": 1}}

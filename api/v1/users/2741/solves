@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T07:00:09+00:00", "type": "correct", "challenge_id": 44, "team": {"name": "UECTF", "id": 1159}, "challenge": {"category": "Reverse", "value": 100, "name": "Perfect Match X-treme", "id": 44}, "id": 5631, "user": {"name": "T2Phage", "id": 2741}}], "meta": {"count": 1}}

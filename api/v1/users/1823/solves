@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T16:11:50+00:00", "type": "correct", "challenge_id": 1, "team": {"name": "Bob L'\u00c9pongiste", "id": 651}, "challenge": {"category": "Misc", "value": 39, "name": "\u25b6 Sanity Check", "id": 1}, "id": 139, "user": {"name": "Sopalinge", "id": 1823}}], "meta": {"count": 1}}

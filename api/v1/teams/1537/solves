@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T03:42:14+00:00", "type": "correct", "challenge_id": 1, "team": {"name": "etherknot", "id": 1537}, "challenge": {"category": "Misc", "value": 39, "name": "\u25b6 Sanity Check", "id": 1}, "id": 5248, "user": {"name": "1uf3", "id": 3185}}], "meta": {"count": 1}}

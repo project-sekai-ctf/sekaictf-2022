@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T06:08:11+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "Green Onions", "id": 612}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 5501, "user": {"name": "cp04042k", "id": 1704}}], "meta": {"count": 1}}

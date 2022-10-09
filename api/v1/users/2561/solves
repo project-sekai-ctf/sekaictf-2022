@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T04:29:08+00:00", "type": "correct", "challenge_id": 7, "team": {"name": "BKISC", "id": 728}, "challenge": {"category": "Reverse", "value": 100, "name": "Matrix Lab 1", "id": 7}, "id": 2608, "user": {"name": "QuiUzumaki", "id": 2561}}], "meta": {"count": 1}}

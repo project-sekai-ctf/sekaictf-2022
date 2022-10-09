@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T01:15:35+00:00", "type": "correct", "challenge_id": 10, "team": {"name": "P4ren", "id": 347}, "challenge": {"category": "Cryptography", "value": 100, "name": "Time Capsule", "id": 10}, "id": 2197, "user": {"name": "Fikrys", "id": 1363}}], "meta": {"count": 1}}

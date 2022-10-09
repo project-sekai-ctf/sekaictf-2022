@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T17:18:04+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "SaintsSec", "id": 669}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 830, "user": {"name": "Nilgam", "id": 2076}}], "meta": {"count": 1}}

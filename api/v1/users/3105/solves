@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T21:25:49+00:00", "type": "correct", "challenge_id": 25, "team": {"name": "Inquisitioners of Go", "id": 663}, "challenge": {"category": "Cryptography", "value": 498, "name": "Diffecient", "id": 25}, "id": 4810, "user": {"name": "100% potatok", "id": 3105}}], "meta": {"count": 1}}

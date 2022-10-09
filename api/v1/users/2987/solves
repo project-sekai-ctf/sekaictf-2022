@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T20:27:46+00:00", "type": "correct", "challenge_id": 11, "team": {"name": "SeaHatVN", "id": 238}, "challenge": {"category": "Cryptography", "value": 268, "name": "FaILProof", "id": 11}, "id": 4720, "user": {"name": "dunglq", "id": 2987}}], "meta": {"count": 1}}

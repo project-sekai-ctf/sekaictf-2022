@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T16:03:35+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "return catbui;", "id": 539}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 4132, "user": {"name": "t00m", "id": 1516}}], "meta": {"count": 1}}

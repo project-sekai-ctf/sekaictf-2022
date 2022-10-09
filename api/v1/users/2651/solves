@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T08:27:26+00:00", "type": "correct", "challenge_id": 47, "team": {"name": "The Cat", "id": 1151}, "challenge": {"category": "Web", "value": 500, "name": "Safelist", "id": 47}, "id": 3131, "user": {"name": "qdqwd13r121", "id": 2651}}], "meta": {"count": 1}}

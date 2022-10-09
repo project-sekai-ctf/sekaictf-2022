@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T08:58:48+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "Cryptis", "id": 377}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 5894, "user": {"name": "VGA", "id": 1070}}], "meta": {"count": 1}}

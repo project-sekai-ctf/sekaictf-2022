@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T18:47:47+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "KEAHELPDESK", "id": 206}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 1325, "user": {"name": "BirkeP", "id": 637}}], "meta": {"count": 1}}

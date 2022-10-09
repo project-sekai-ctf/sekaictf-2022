@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T05:51:06+00:00", "type": "correct", "challenge_id": 7, "team": {"name": "TeamBST", "id": 627}, "challenge": {"category": "Reverse", "value": 100, "name": "Matrix Lab 1", "id": 7}, "id": 5455, "user": {"name": "tamagoyaki", "id": 1283}}], "meta": {"count": 1}}

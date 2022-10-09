@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T09:08:25+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "The_Welders", "id": 674}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 5915, "user": {"name": "TalCock", "id": 2159}}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T20:26:15+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "ThisIsNotTheTeamYouAreLookingFor", "id": 67}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 4714, "user": {"name": "magicsam", "id": 249}}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T17:44:05+00:00", "type": "correct", "challenge_id": 34, "team": {"name": "Spooder_CTF", "id": 215}, "challenge": {"category": "PPC", "value": 100, "name": "Let\u2019s Play Osu!Mania", "id": 34}, "id": 1002, "user": {"name": "jsk32233", "id": 581}}], "meta": {"count": 1}}

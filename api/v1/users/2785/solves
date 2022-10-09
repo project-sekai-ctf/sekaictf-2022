@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T15:18:39+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "KITCTF", "id": 737}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 4030, "user": {"name": "hatboxoxidation", "id": 2785}}], "meta": {"count": 1}}

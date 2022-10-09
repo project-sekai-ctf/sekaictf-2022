@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T21:52:49+00:00", "type": "correct", "challenge_id": 16, "team": {"name": "Dsgm", "id": 167}, "challenge": {"category": "Pwn", "value": 498, "name": "Hello World Setup", "id": 16}, "id": 4842, "user": {"name": "xiaobye", "id": 2811}}], "meta": {"count": 1}}

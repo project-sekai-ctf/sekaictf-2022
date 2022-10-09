@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T18:55:46+00:00", "type": "correct", "challenge_id": 5, "team": {"name": "bootplug", "id": 1448}, "challenge": {"category": "Forensics", "value": 100, "name": "Broken Converter", "id": 5}, "id": 4507, "user": {"name": "klarz", "id": 3055}}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T07:15:47+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "DARKMODE", "id": 1535}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 5665, "user": {"name": "EvilLogic", "id": 3182}}], "meta": {"count": 1}}

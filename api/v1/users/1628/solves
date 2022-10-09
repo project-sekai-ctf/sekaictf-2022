@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T11:47:59+00:00", "type": "correct", "challenge_id": 7, "team": {"name": "Lorem Ipsec", "id": 943}, "challenge": {"category": "Reverse", "value": 100, "name": "Matrix Lab 1", "id": 7}, "id": 3539, "user": {"name": "GBrawl", "id": 1628}}], "meta": {"count": 1}}

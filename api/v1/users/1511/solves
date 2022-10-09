@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T16:04:27+00:00", "type": "correct", "challenge_id": 1, "team": {"name": "Unicorns of Security", "id": 509}, "challenge": {"category": "Misc", "value": 39, "name": "\u25b6 Sanity Check", "id": 1}, "id": 26, "user": {"name": "Zevisto", "id": 1511}}], "meta": {"count": 1}}

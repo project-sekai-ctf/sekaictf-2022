@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T17:42:15+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "KITCTF", "id": 737}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 991, "user": {"name": "ex0244", "id": 2016}}], "meta": {"count": 1}}

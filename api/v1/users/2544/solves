@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T10:52:29+00:00", "type": "correct", "challenge_id": 28, "team": {"name": "BKISC", "id": 728}, "challenge": {"category": "Web", "value": 260, "name": "Sekai Game Start", "id": 28}, "id": 3412, "user": {"name": "meow", "id": 2544}}], "meta": {"count": 1}}

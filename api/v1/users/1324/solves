@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T18:59:32+00:00", "type": "correct", "challenge_id": 7, "team": {"name": "WolvSec", "id": 485}, "challenge": {"category": "Reverse", "value": 100, "name": "Matrix Lab 1", "id": 7}, "id": 1378, "user": {"name": "ct", "id": 1324}}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T22:55:59+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "contagion2rev", "id": 239}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 4941, "user": {"name": "SkrubLawd", "id": 1416}}], "meta": {"count": 1}}

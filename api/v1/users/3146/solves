@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T01:41:58+00:00", "type": "correct", "challenge_id": 5, "team": {"name": "Hi team", "id": 185}, "challenge": {"category": "Forensics", "value": 100, "name": "Broken Converter", "id": 5}, "id": 5121, "user": {"name": "mahmud alaoui", "id": 3146}}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T22:00:41+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "Peppercon", "id": 182}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 1897, "user": {"name": "nomtropolis", "id": 2359}}], "meta": {"count": 1}}

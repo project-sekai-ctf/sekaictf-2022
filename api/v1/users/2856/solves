@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T18:33:03+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "radiv", "id": 364}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 4467, "user": {"name": "Liki4", "id": 2856}}], "meta": {"count": 1}}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Project SEKAI CTF 2022</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="SekaiCTF 2022" />
+<meta property="og:description" content="SekaiCTF 2022 is yet another CTF contest brought to you by yet another CTF team." />
+<meta property="og:image" content="https://ProjectSEKAIctf.1a23.studio/twitter-card.png" />
+<meta property="og:type" content="website" />
+<link rel="shortcut icon" href="/files/adc871f25f4d7cdb7321ac32474c614c/sekai2_SEKAI_CTF_Square_Small.r.png">
+<script src="https://unpkg.com/@ungap/has-own@0.1.1/min.js"></script>
+<link rel="stylesheet" href="/themes/luna/static/assets/main.6e2cb990.css">
+<script type="text/javascript">
+        window.init = {
+            'urlRoot': "",
+            'csrfNonce': "fd96dda9bc6a1d0ca14990cc26f3958c2735c873bc8bfc7deb4ba574ff4f2f7a",
+            'userMode': "teams",
+            'smallIcon': "/files/adc871f25f4d7cdb7321ac32474c614c/sekai2_SEKAI_CTF_Square_Small.r.png",
+            'userId': 0,
+            'userName': null,
+            'userEmail': "None",
+            'teamId': null,
+            'teamName': null,
+            'start': 1664553600,
+            'end': 1664726400,
+            'themeSettings': {"cat_name_crypto": "Cryptography", "cat_name_forensics": "Forensics", "cat_name_misc": "Misc", "cat_name_ppc": "PPC", "cat_name_pwn": "Pwn", "cat_name_rev": "Reverse", "cat_name_web": "Web", "challenge_category_order": "", "challenge_order": "", "flag_placeholder": "SEKAI{\u2026}", "social_banner": "https://ProjectSEKAIctf.1a23.studio/twitter-card.png", "social_desc": "SekaiCTF 2022 is yet another CTF contest brought to you by yet another CTF team.", "social_link_icon": "mdi:github", "social_link_url": "https://github.com/project-sekai-ctf/sekaictf-2022", "tag_difficulty_1": "\u2b50", "tag_difficulty_2": "\u2b50\u2b50", "tag_difficulty_3": "\u2b50\u2b50\u2b50", "tag_difficulty_4": "\u2b50\u2b50\u2b50\u2b50", "tag_difficulty_5": "\u2b50\u2b50\u2b50\u2b50\u2b50"},
+        }
+    </script>
+</head>
+<body>
+<svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" style="position: absolute; visibility: hidden;">
+<filter id="primaryIconStroke" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feMorphology operator="dilate" radius="2 2" in="SourceGraphic" result="morphology" />
+<feMorphology operator="dilate" radius="3.5 3.5" in="SourceGraphic" result="morphology1" />
+<feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+<feFlood flood-color="#E0E0E0" flood-opacity="1" result="flood1" />
+<feComposite in="flood" in2="morphology" operator="in" result="composite" />
+<feComposite in="flood1" in2="morphology1" operator="in" result="composite1" />
+<feMerge result="merge">
+<feMergeNode in="composite1" />
+<feMergeNode in="composite" />
+<feMergeNode in="SourceGraphic" />
+</feMerge>
+</filter>
+<filter id="accentIconStroke" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feMorphology operator="dilate" radius="2 2" in="SourceGraphic" result="morphology" />
+<feMorphology operator="dilate" radius="3.5 3.5" in="SourceGraphic" result="morphology1" />
+<feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+<feFlood flood-color="#95FCDB" flood-opacity="1" result="flood1" />
+<feComposite in="flood" in2="morphology" operator="in" result="composite" />
+<feComposite in="flood1" in2="morphology1" operator="in" result="composite1" />
+<feMerge result="merge">
+<feMergeNode in="composite1" />
+<feMergeNode in="composite" />
+<feMergeNode in="SourceGraphic" />
+</feMerge>
+</filter>
+<filter id="chevronStroke" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feMorphology operator="dilate" radius="3 3" in="SourceGraphic" result="morphology" />
+<feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+<feComposite in="flood" in2="morphology" operator="in" result="composite2" />
+<feMerge result="merge">
+<feMergeNode in="composite2" />
+<feMergeNode in="SourceGraphic" />
+</feMerge>
+</filter>
+<linearGradient id="primaryGradient" gradientTransform="rotate(90)">
+<stop offset="0%" stop-color="#EB53B8" stop-opacity="1" />
+<stop offset="100%" stop-color="#EE79F8" stop-opacity="1" />
+</linearGradient>
+</svg>
+<div class="triangleContainer page-challenges-listing">
+<button class="button shade iconButton menuButton buttonNotification" id="mainMenuButton" aria-label="Main menu" title="Main Menu">
+<iconify-icon icon="ic:baseline-menu"></iconify-icon>
+</button>
+<dialog class="modal fit" id="mainMenuModal">
+<h2 class="modalHeader">Menu</h2>
+<div class="modalBody">
+<a class="button textButton shade primaryIcon" href="/rules">
+<iconify-icon icon="ic:baseline-contact-page"></iconify-icon>
+<span>Rules</span>
+</a>
+<a class="button textButton shade primaryIcon" href="/teams">
+<iconify-icon icon="ic:baseline-people-alt"></iconify-icon>
+<span>Teams</span>
+</a>
+<a class="button textButton shade primaryIcon" href="/users">
+<iconify-icon icon="ic:baseline-person"></iconify-icon>
+<span>Users</span>
+</a>
+<a class="button textButton shade primaryIcon" href="/scoreboard">
+<iconify-icon icon="mdi:podium"></iconify-icon>
+<span>Ranking</span>
+</a>
+<a class="button textButton alternate" href="/">
+<iconify-icon icon="ic:baseline-home"></iconify-icon>
+<span>Home</span>
+</a>
+<a class="button textButton alternate" id="mainMenuTitleBtn" href="/">
+<iconify-icon icon="icon-park-solid:back"></iconify-icon>
+<span>Title</span>
+</a>
+<a class="button textButton alternate" id="mainMenuTitleBtn" href="/challenges">
+<iconify-icon icon="fluent:music-note-2-24-filled"></iconify-icon>
+<span>Challenges</span>
+</a><a class="button textButton alternate" id="mainMenuTitleBtn" href="https://github.com/project-sekai-ctf/sekaictf-2022/">
+<iconify-icon icon="mdi:github"></iconify-icon>
+<span>GitHub</span>
+</a></div>
+<div class="modalFooter">
+<button class="button textButton shade" id="mainMenuClose">
+<span>Close</span>
+</button>
+</div>
+</dialog>
+<div id="challengesWrapper" x-data="ChallengeBoard" @load-challenges.window="loadChallengesEvt()" @load-challenge.window="loadChallengeEvt($event.detail)" @collapse-challenge.window="collapseChallengeEvt()" @lrlr.window="lrlr()">
+<div class="titleContainer">
+<button class="button iconButton shade" id="backButton" aria-label="Go back" title="Go back">
+<iconify-icon icon="icon-park-solid:back"></iconify-icon>
+</button>
+<div class="titleGroup">
+<h1 class="title" x-text="lrn === null ? 'Challenges' : 'Solo Live'">Challenges</h1>
+<h2 class="subtitle"><span x-text="lrn === null ? 'Challenges list' : '楽曲選択'" :lang="lrn === null ? 'en' : 'ja'">Challenges list</span></h2>
+</div>
+</div>
+<button class="button iconButton tiny" id="settingsButton" @click="$refs.settingsModal.showModal()" aria-label="Challenge settings" title="Challenge settings">
+<iconify-icon icon="material-symbols:settings"></iconify-icon>
+</button>
+<nav class="tabs">
+<div class="filler"></div>
+<button :class="{'tab': true, 'active': category === null}" @click="setCategory(null)" aria-label="All challenges" x-text="lrn === null ? 'All' : 'すべて'" :lang="lrn === null ? 'en' : 'ja'">All</button>
+<template x-for="(cat, idx) in getCategoryWithIcons()" :key="idx">
+<button class="tab" :class="{'tab': true, 'active': category === cat[0]}" @click="setCategory(cat[0])" :aria-label="`${cat[0]}, category`">
+<img :src="cat[1]" :alt="cat[0]" x-show="cat[1] !== null" :title="cat[0]" aria-hidden="true" />
+<span x-text="cat[0]" x-show="cat[1] === null"></span>
+</button>
+</template>
+<div class="filler"></div>
+</nav>
+<div id="challengesListWrapper">
+<div id="challengesList" :class="{'loopHighlight': loopHighlight, 'highContrast': highContrast}" x-ref="listNode" role="list" aria-label="Challenges list">
+<div x-show="filteredChallenges.length < 1" class="noChallenge">No challenges found.</div>
+<div x-show="filteredChallenges.length > 0" class="indicator">▶</div>
+<template x-for="(ch, idx) in repeatArray(filteredChallenges, repeatTimes)" :key="`a${ch.id}-${idx}`">
+<div :data-id="ch.id" :class="{'challengeItem': true, 'solved': ch.solved_by_me, 'solvedFirst': ch.is_first_solver, }" @click="selectChallenge(idx % filteredChallenges.length, $event.target)" aria-hidden="true">
+<div :class="{challengeScore: true, solves: sortOrder === 'Solves', lrn: lrn !== null}" x-text="sortOrder === 'Solves' ? ch.solves : ch.value" :aria-label="sortOrder === 'Solves' ? `${ch.solves} solves` : `${ch.value} points`"></div>
+<template x-if="lrn !== null"><img :src="`https://assets.pjsek.ai/file/pjsekai-assets/startapp/music/jacket/${lrn[(ch.id - 1) % lrn.length].assetbundleName}/${lrn[(ch.id - 1) % lrn.length].assetbundleName}.png`" class="challengeCover"></template>
+<div class="challengeDetails">
+<div class="challengeLabel" x-show="ch.label" x-text="ch.label"></div>
+<div class="challengeTitle" x-text="lrn === null ? ch.name : lrn[(ch.id - 1) % lrn.length].title" :lang="lrn === null ? 'en' : 'ja'"></div>
+<div class="challengeCategory" x-text="ch.category"></div>
+<div class="challengeDifficulty" x-bind:title="`Difficulty level ${ch.difficulty}, ` + (ch.is_first_solver ? 'you are the first solver' : ch.solved_by_me ? 'solved' : 'unsolved')">
+<template x-for="_ in Array(ch.difficulty)">
+<span :class="{'challengeIndicator': true, 'first': ch.is_first_solver, 'solved': ch.solved_by_me && !ch.is_first_solver}"></span>
+</template>
+</div>
+</div>
+</div>
+</template>
+<template x-for="(ch, idx) in filteredChallenges" :key="`c${ch.id}-${idx}`">
+<button :data-id="ch.id" :data-is-center="idx" :data-index="idx" :class="{ 'challengeItem': true, 'solved': ch.solved_by_me, 'solvedFirst': ch.is_first_solver, 'selected': ch.id === selectedId }" @click="selectChallenge(idx, $event.target)" role="listitem" :aria-label="`${ch.name}, ${ch.value} points, category ${ch.category}, difficulty level ${ch.difficulty}, ` + (ch.is_first_solver ? 'you are the first solver' : ch.solved_by_me ? 'solved' : 'unsolved')">
+<div :class="{challengeScore: true, solves: sortOrder === 'Solves', lrn: lrn !== null}" x-text="sortOrder === 'Solves' ? ch.solves : ch.value" :aria-label="sortOrder === 'Solves' ? `${ch.solves} solves` : `${ch.value} points`"></div>
+<template x-if="lrn !== null"><img :src="`https://assets.pjsek.ai/file/pjsekai-assets/startapp/music/jacket/${lrn[(ch.id - 1) % lrn.length].assetbundleName}/${lrn[(ch.id - 1) % lrn.length].assetbundleName}.png`" class="challengeCover"></template>
+<div class="challengeDetails">
+<div class="challengeLabel" x-show="ch.label" x-text="ch.label"></div>
+<div class="challengeTitle" x-text="lrn === null ? ch.name : lrn[(ch.id - 1) % lrn.length].title" :lang="lrn === null ? 'en' : 'ja'"></div>
+<div class="challengeCategory" x-text="ch.category"></div>
+<div class="challengeDifficulty" x-bind:title="`Difficulty level ${ch.difficulty}, ` + (ch.is_first_solver ? 'you are the first solver' : ch.solved_by_me ? 'solved' : 'unsolved')">
+<template x-for="_ in Array(ch.difficulty)">
+<span :class="{'challengeIndicator': true, 'first': ch.is_first_solver, 'solved': ch.solved_by_me && !ch.is_first_solver}"></span>
+</template>
+</div>
+</div>
+</button>
+</template>
+<template x-for="(ch, idx) in repeatArray(filteredChallenges, repeatTimes)" :key="`b${ch.id}-${idx}`" x-ref="bottomRepeatTemplate">
+<div :data-id="ch.id" :class="{'challengeItem': true, 'solved': ch.solved_by_me, 'solvedFirst': ch.is_first_solver, }" @click="selectChallenge(idx % filteredChallenges.length, $event.target)" aria-hidden="true">
+<div :class="{challengeScore: true, solves: sortOrder === 'Solves', lrn: lrn !== null}" x-text="sortOrder === 'Solves' ? ch.solves : ch.value" :aria-label="sortOrder === 'Solves' ? `${ch.solves} solves` : `${ch.value} points`"></div>
+<template x-if="lrn !== null"><img :src="`https://assets.pjsek.ai/file/pjsekai-assets/startapp/music/jacket/${lrn[(ch.id - 1) % lrn.length].assetbundleName}/${lrn[(ch.id - 1) % lrn.length].assetbundleName}.png`" class="challengeCover"></template>
+<div class="challengeDetails">
+<div class="challengeLabel" x-show="ch.label" x-text="ch.label"></div>
+<div class="challengeTitle" x-text="lrn === null ? ch.name : lrn[(ch.id - 1) % lrn.length].title" :lang="lrn === null ? 'en' : 'ja'"></div>
+<div class="challengeCategory" x-text="ch.category"></div>
+<div class="challengeDifficulty" x-bind:title="`Difficulty level ${ch.difficulty}, ` + (ch.is_first_solver ? 'you are the first solver' : ch.solved_by_me ? 'solved' : 'unsolved')">
+<template x-for="_ in Array(ch.difficulty)">
+<span :class="{'challengeIndicator': true, 'first': ch.is_first_solver, 'solved': ch.solved_by_me && !ch.is_first_solver}"></span>
+</template>
+</div>
+</div>
+</div>
+</template>
+</div>
+<div x-show="!loaded" class="loadingWrapper"><div class="loading">Now loading<span class="dot0">.</span><span class="dot1">.</span><span class="dot2">.</span></div></div>
+</div>
+<article id="challengesContentWrapper" :class="{'expanded': selectedId !== null}" x-ref="challengesContentWrapper" tabindex="0" x-html="$store.challenge.data.view">
+</article>
+<div class="loadingWrapper" x-show="$store.challenge.loading"><div class="loading">Now loading<span class="dot0">.</span><span class="dot1">.</span><span class="dot2">.</span></div></div>
+<dialog class="modal fit" id="challengesSettings" x-ref="settingsModal" :lang="lrn === null ? 'en' : 'ja'">
+<h2 class="modalHeader" x-text="lrn === null ? 'Challenges settings' : 'オプション'">Challenges settings</h2>
+<div class="modalBody">
+<h3 class="sectionTitle" x-text="lrn === null ? 'Sort order' : '並び替え'">Sort order</h3>
+<div class="challengeSettings2">
+<div class="radioGroup">
+<input type="radio" @change="refreshSortFilter()" name="sortOrder" x-model="sortOrder" id="sortOrederDifficulty" value="Difficulty">
+<label for="sortOrederDifficulty" x-text="lrn === null ? 'Difficulty' : '難易度順'">Difficulty</label>
+</div>
+<div class="radioGroup">
+<input type="radio" @change="refreshSortFilter()" name="sortOrder" x-model="sortOrder" id="sortOrederScore" value="Score">
+<label for="sortOrederScore" x-text="lrn === null ? 'Score' : 'スコア順'">Score</label>
+</div>
+<div class="radioGroup">
+<input type="radio" @change="refreshSortFilter()" name="sortOrder" x-model="sortOrder" id="sortOrederSolves" value="Solves">
+<label for="sortOrederSolves" x-text="lrn === null ? 'Solves' : 'クリア人数順'">Solves</label>
+</div>
+<div class="radioGroup">
+<input type="radio" @change="refreshSortFilter()" name="sortOrder" x-model="sortOrder" id="sortOrederName" value="Name">
+<label for="sortOrederName" x-text="lrn === null ? 'Name' : '50音順'">Name</label>
+</div>
+</div>
+<h3 class="sectionTitle" x-text="lrn === null ? 'Filter challenges' : '絞り込み'">Filter challenges</h3>
+<div class="challengeSettings3">
+<div class="radioGroup">
+<input type="radio" @change="refreshSortFilter()" name="filterCondition" x-model="filterCondition" id="filterConditionAll" value="All">
+<label for="filterConditionAll" x-text="lrn === null ? 'All' : 'すべて'">All</label>
+</div>
+<div class="radioGroup">
+<input type="radio" @change="refreshSortFilter()" name="filterCondition" x-model="filterCondition" id="filterConditionUnsolved" value="Unsolved">
+<label for="filterConditionUnsolved" x-text="lrn === null ? 'Unsolved' : '未クリア'">Unsolved</label>
+</div>
+<div class="radioGroup">
+<input type="radio" @change="refreshSortFilter()" name="filterCondition" x-model="filterCondition" id="filterConditionSolved" value="Solved">
+<label for="filterConditionSolved" x-text="lrn === null ? 'Solved' : 'クリア済み'">Solved</label>
+</div>
+</div>
+<h3 class="sectionTitle" x-text="lrn === null ? 'Accessibility' : 'システム'">Accessibility</h3>
+<div class="challengeSettings3">
+<div class="chip" x-text="lrn === null ? 'Focus mode' : 'フォーカスモード'">Focus mode</div>
+<div class="radioGroup">
+<input type="radio" name="loopHighlight" x-model.number="loopHighlight" id="loopHighlightOn" value="1">
+<label for="loopHighlightOn" x-text="lrn === null ? 'On' : 'ON'">On</label>
+</div>
+<div class="radioGroup">
+<input type="radio" name="loopHighlight" x-model.number="loopHighlight" id="loopHighlightOff" value="0">
+<label for="loopHighlightOff" x-text="lrn === null ? 'Off' : 'OFF'">Off</label>
+</div>
+<div class="chip" x-text="lrn === null ? 'High contrast' : 'ハイコントラスト'">High contrast</div>
+<div class="radioGroup">
+<input type="radio" name="highContrast" x-model.number="highContrast" id="highContrastOn" value="1">
+<label for="highContrastOn" x-text="lrn === null ? 'On' : 'ON'">On</label>
+</div>
+<div class="radioGroup">
+<input type="radio" name="highContrast" x-model.number="highContrast" id="highContrastOff" value="0">
+<label for="highContrastOff" x-text="lrn === null ? 'Off' : 'OFF'">Off</label>
+</div>
+</div>
+</div>
+<div class="modalFooter">
+<button class="button textButton shade" x-ref="settingsModalClose">
+<span x-text="lrn === null ? 'Close' : '閉じる'" :lang="lrn === null ? 'en' : 'ja'">Close</span>
+</button>
+</div>
+</dialog>
+<dialog class="modal fit" id="oobeModal" x-ref="oobeModal">
+<h2 class="modalHeader">Select a style</h2>
+<div class="modalBody modeSelection">
+<button class="button" id="sekaiMode" @click="oobeUpdate(false)">
+<iconify-icon icon="fluent:music-note-2-24-filled"></iconify-icon>
+<div class="subName" lang="ja">セカイモード</div>
+<div class="mainName">SEKAI mode</div>
+</button>
+<button class="button" id="focusMode" @click="oobeUpdate(true)">
+<iconify-icon icon="carbon:accessibility-color"></iconify-icon>
+<div class="subName" lang="ja">フォーカスモード</div>
+<div class="mainName">Focus mode</div>
+</button>
+</div>
+<div class="modalFooter">
+<div class="formHint">You can change your selection later in the Settings panel.</div>
+</div>
+</dialog>
+</div>
+</div>
+<script defer type="module" src="/themes/luna/static/assets/duration.c050dc80.js"></script><script defer type="module" src="/themes/luna/static/assets/echarts.4cc66d9c.js"></script><script defer type="module" src="/themes/luna/static/assets/notificationCounter.4f4e1e9f.js"></script><script defer type="module" src="/themes/luna/static/assets/base.982ab451.js"></script>
+<style>
+    :root {
+        --icon-wall: url("/themes/luna/static/img/assets/icon-wall.svg?d=7f25851e");
+        --triangular-bg: url("/themes/luna/static/img/triangular-bg.svg?d=7f25851e");
+        --halftone-tail: url("/themes/luna/static/img/halftone-tail.svg?d=7f25851e");
+        --stripe-border: url("/themes/luna/static/img/stripe-border.svg?d=7f25851e");
+    }
+</style>
+<style>
+body {
+    --popout: url("/themes/luna/static/img/popout.svg?d=7f25851e");
+}
+</style>
+<script>
+  window.tagImages = {
+    "misc": "/themes/luna/static/img/categories/Misc.svg?d=7f25851e",
+    "crypto": "/themes/luna/static/img/categories/Crypto.svg?d=7f25851e",
+    "forensics": "/themes/luna/static/img/categories/Forensics.svg?d=7f25851e",
+    "reverse": "/themes/luna/static/img/categories/Reverse.svg?d=7f25851e",
+    "pwn": "/themes/luna/static/img/categories/Pwn.svg?d=7f25851e",
+    "ppc": "/themes/luna/static/img/categories/PPC.png?d=7f25851e",
+    "web": "/themes/luna/static/img/categories/Web.svg?d=7f25851e",
+  };
+  window.rankIcons = [
+    "/themes/luna/static/img/ranks/rank-1.svg?d=7f25851e",
+    "/themes/luna/static/img/ranks/rank-2.svg?d=7f25851e",
+    "/themes/luna/static/img/ranks/rank-3.svg?d=7f25851e",
+  ];
+</script>
+<script defer type="module" src="/themes/luna/static/assets/module.esm.860ebcbd.js"></script><script defer type="module" src="/themes/luna/static/assets/base.982ab451.js"></script><script defer type="module" src="/themes/luna/static/assets/duration.c050dc80.js"></script><script defer type="module" src="/themes/luna/static/assets/lodash.a9f8c3c1.js"></script><script defer type="module" src="/themes/luna/static/assets/clipboard.20c34662.js"></script><script defer type="module" src="/themes/luna/static/assets/echarts.4cc66d9c.js"></script><script defer type="module" src="/themes/luna/static/assets/notificationCounter.4f4e1e9f.js"></script><script defer type="module" src="/themes/luna/static/assets/tippy.esm.67f4ecc9.js"></script><script defer type="module" src="/themes/luna/static/assets/challenges.689bbc8f.js"></script>
+<script defer type="module" src="/ctfd2pages/hooks/challenges.min.js"></script>
+<script defer type="module" src="/ctfd2pages/hooks/challenges.min.js"></script>
+<style>
+        body {
+            --halftone-bg: url("/themes/luna/static/img/halftoneButtonBg.svg?d=7f25851e");
+            --halftone-bg-white: url("/themes/luna/static/img/halftoneButtonBgWhite.svg?d=7f25851e");
+            --halftone-bg-white-25: url("/themes/luna/static/img/halftoneButtonBgWhite25.svg?d=7f25851e");
+        }
+    </style>
+</body>
+</html>

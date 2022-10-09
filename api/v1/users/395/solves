@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T23:35:41+00:00", "type": "correct", "challenge_id": 1, "team": {"name": "Cult of the lost call stack", "id": 6}, "challenge": {"category": "Misc", "value": 39, "name": "\u25b6 Sanity Check", "id": 1}, "id": 2033, "user": {"name": "batsy", "id": 395}}], "meta": {"count": 1}}

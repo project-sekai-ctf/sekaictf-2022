@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T19:44:34+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "BKISC", "id": 728}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 4595, "user": {"name": "hoanghoho", "id": 2549}}], "meta": {"count": 1}}

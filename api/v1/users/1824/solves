@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T15:10:37+00:00", "type": "correct", "challenge_id": 7, "team": {"name": "uetctf", "id": 642}, "challenge": {"category": "Reverse", "value": 100, "name": "Matrix Lab 1", "id": 7}, "id": 4012, "user": {"name": "uetctf", "id": 1824}}], "meta": {"count": 1}}

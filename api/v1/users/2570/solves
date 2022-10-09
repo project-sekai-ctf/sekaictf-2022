@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T12:01:14+00:00", "type": "correct", "challenge_id": 3, "team": {"name": "L3H_Sec", "id": 341}, "challenge": {"category": "Misc", "value": 100, "name": "Sus", "id": 3}, "id": 3555, "user": {"name": "lzyyds", "id": 2570}}], "meta": {"count": 1}}

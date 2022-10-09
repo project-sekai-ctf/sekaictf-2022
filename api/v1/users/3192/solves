@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T05:33:47+00:00", "type": "correct", "challenge_id": 14, "team": {"name": "L3H_Sec", "id": 341}, "challenge": {"category": "Pwn", "value": 385, "name": "Save Me", "id": 14}, "id": 5396, "user": {"name": "dangdang7777", "id": 3192}}], "meta": {"count": 1}}

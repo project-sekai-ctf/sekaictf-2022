@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T05:34:19+00:00", "type": "correct", "challenge_id": 1, "team": {"name": "RuntimeError", "id": 724}, "challenge": {"category": "Misc", "value": 39, "name": "\u25b6 Sanity Check", "id": 1}, "id": 2782, "user": {"name": "Yvling", "id": 1207}}], "meta": {"count": 1}}

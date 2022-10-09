@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T09:44:00+00:00", "type": "correct", "challenge_id": 14, "team": {"name": "Black Bauhinia", "id": 334}, "challenge": {"category": "Pwn", "value": 385, "name": "Save Me", "id": 14}, "id": 3275, "user": {"name": "cire meat pop", "id": 2715}}], "meta": {"count": 1}}

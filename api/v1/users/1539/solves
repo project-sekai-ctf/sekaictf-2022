@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T09:14:02+00:00", "type": "correct", "challenge_id": 6, "team": {"name": "p1c4n3ko", "id": 551}, "challenge": {"category": "Forensics", "value": 368, "name": "flag Mono", "id": 6}, "id": 3232, "user": {"name": "N1ko9", "id": 1539}}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T19:16:08+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "MISC", "id": 689}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 1442, "user": {"name": "meriem", "id": 2176}}], "meta": {"count": 1}}

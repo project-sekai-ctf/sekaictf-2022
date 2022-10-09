@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T19:24:51+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "Octet Mignonne", "id": 277}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 1472, "user": {"name": "Perchax", "id": 2240}}], "meta": {"count": 1}}

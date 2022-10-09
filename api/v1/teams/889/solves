@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T18:03:22+00:00", "type": "correct", "challenge_id": 1, "team": {"name": "{Insert CTF Here}", "id": 889}, "challenge": {"category": "Misc", "value": 39, "name": "\u25b6 Sanity Check", "id": 1}, "id": 1120, "user": {"name": "b0x41s", "id": 2193}}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T15:00:51+00:00", "type": "correct", "challenge_id": 11, "team": {"name": "TnomiPho", "id": 566}, "challenge": {"category": "Cryptography", "value": 268, "name": "FaILProof", "id": 11}, "id": 6535, "user": {"name": "ljonja", "id": 2883}}], "meta": {"count": 1}}

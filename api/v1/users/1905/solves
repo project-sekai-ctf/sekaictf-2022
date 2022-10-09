@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T02:10:25+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "\u5144\u5f1f\u706b\u9505\u7fa4", "id": 518}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 2339, "user": {"name": "ube", "id": 1905}}], "meta": {"count": 1}}

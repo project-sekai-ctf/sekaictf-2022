@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T16:47:38+00:00", "type": "correct", "challenge_id": 1, "team": {"name": "Rote Kadetten", "id": 190}, "challenge": {"category": "Misc", "value": 39, "name": "\u25b6 Sanity Check", "id": 1}, "id": 578, "user": {"name": "0xR1st0", "id": 2063}}], "meta": {"count": 1}}

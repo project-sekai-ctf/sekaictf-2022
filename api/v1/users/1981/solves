@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T14:04:33+00:00", "type": "correct", "challenge_id": 11, "team": {"name": "KITCTF", "id": 737}, "challenge": {"category": "Cryptography", "value": 268, "name": "FaILProof", "id": 11}, "id": 6423, "user": {"name": "BobJay", "id": 1981}}], "meta": {"count": 1}}

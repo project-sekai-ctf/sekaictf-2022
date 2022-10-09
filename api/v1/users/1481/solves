@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T00:35:31+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "ROP of the morning to you", "id": 529}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 2140, "user": {"name": "its0x11", "id": 1481}}], "meta": {"count": 1}}

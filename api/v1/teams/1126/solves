@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T06:48:05+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "blackpinker", "id": 1126}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 2934, "user": {"name": "blackpinker", "id": 2563}}], "meta": {"count": 1}}

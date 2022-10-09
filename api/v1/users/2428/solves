@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T05:35:53+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "asciioverflow", "id": 85}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 5409, "user": {"name": "Codi", "id": 2428}}], "meta": {"count": 1}}

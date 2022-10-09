@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T05:51:22+00:00", "type": "correct", "challenge_id": 16, "team": {"name": "The Cat", "id": 1151}, "challenge": {"category": "Pwn", "value": 498, "name": "Hello World Setup", "id": 16}, "id": 5457, "user": {"name": "Nobodyisnobody", "id": 1756}}], "meta": {"count": 1}}

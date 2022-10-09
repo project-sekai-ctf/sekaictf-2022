@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T18:01:43+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "NYUSEC", "id": 184}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 1113, "user": {"name": "m00n", "id": 1296}}], "meta": {"count": 1}}

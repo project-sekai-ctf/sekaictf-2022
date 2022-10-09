@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T22:09:53+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "CCSC", "id": 998}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 1905, "user": {"name": "torquedork", "id": 2379}}], "meta": {"count": 1}}

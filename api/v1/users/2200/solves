@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T20:45:12+00:00", "type": "correct", "challenge_id": 3, "team": {"name": "duks", "id": 705}, "challenge": {"category": "Misc", "value": 100, "name": "Sus", "id": 3}, "id": 1723, "user": {"name": "sylvain", "id": 2200}}], "meta": {"count": 1}}

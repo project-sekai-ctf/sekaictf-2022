@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T19:57:56+00:00", "type": "correct", "challenge_id": 5, "team": {"name": "N00bsCTF", "id": 397}, "challenge": {"category": "Forensics", "value": 100, "name": "Broken Converter", "id": 5}, "id": 1598, "user": {"name": "chillz", "id": 1244}}], "meta": {"count": 1}}

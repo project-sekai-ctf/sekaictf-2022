@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T20:31:47+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "um ctf team", "id": 1340}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 4729, "user": {"name": "mixy1", "id": 2894}}], "meta": {"count": 1}}

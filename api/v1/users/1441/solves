@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T00:50:03+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "TCP1P", "id": 514}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 2164, "user": {"name": "Dimas Maulana", "id": 1441}}], "meta": {"count": 1}}

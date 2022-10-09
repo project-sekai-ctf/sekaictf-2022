@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T07:11:25+00:00", "type": "correct", "challenge_id": 1, "team": {"name": "before the code exits", "id": 1238}, "challenge": {"category": "Misc", "value": 39, "name": "\u25b6 Sanity Check", "id": 1}, "id": 2971, "user": {"name": "imperfect.fourth", "id": 2747}}], "meta": {"count": 1}}

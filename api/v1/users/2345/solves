@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T15:44:13+00:00", "type": "correct", "challenge_id": 7, "team": {"name": "UNBCTF", "id": 501}, "challenge": {"category": "Reverse", "value": 100, "name": "Matrix Lab 1", "id": 7}, "id": 4071, "user": {"name": "acmkan", "id": 2345}}], "meta": {"count": 1}}

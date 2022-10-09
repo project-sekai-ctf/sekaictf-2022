@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T17:56:56+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "GopherHack", "id": 199}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 1087, "user": {"name": "Jythonscript", "id": 2007}}], "meta": {"count": 1}}

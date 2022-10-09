@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T17:39:51+00:00", "type": "correct", "challenge_id": 1, "team": {"name": "ACMcyber@UCSD", "id": 324}, "challenge": {"category": "Misc", "value": 39, "name": "\u25b6 Sanity Check", "id": 1}, "id": 979, "user": {"name": "&y", "id": 1167}}], "meta": {"count": 1}}

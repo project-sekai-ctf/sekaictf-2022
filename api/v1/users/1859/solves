@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T12:09:36+00:00", "type": "correct", "challenge_id": 43, "team": {"name": "pwnagaukar", "id": 497}, "challenge": {"category": "Cryptography", "value": 495, "name": "Robust CBC", "id": 43}, "id": 6225, "user": {"name": "GlacierSG", "id": 1859}}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T07:52:38+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "cuccs", "id": 1160}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 3070, "user": {"name": "k4l1", "id": 2613}}], "meta": {"count": 1}}

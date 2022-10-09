@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T01:53:23+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "Big m'Hack", "id": 296}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 2277, "user": {"name": "xl00t", "id": 848}}], "meta": {"count": 1}}

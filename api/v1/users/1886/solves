@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T17:33:24+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "Simplo", "id": 634}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 941, "user": {"name": "MtSaka", "id": 1886}}], "meta": {"count": 1}}

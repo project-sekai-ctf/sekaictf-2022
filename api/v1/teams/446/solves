@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T17:36:20+00:00", "type": "correct", "challenge_id": 7, "team": {"name": "Antaalcar", "id": 446}, "challenge": {"category": "Reverse", "value": 100, "name": "Matrix Lab 1", "id": 7}, "id": 960, "user": {"name": "Antaalcar", "id": 1256}}], "meta": {"count": 1}}

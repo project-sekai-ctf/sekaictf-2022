@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T15:04:32+00:00", "type": "correct", "challenge_id": 7, "team": {"name": "Y-CTF", "id": 439}, "challenge": {"category": "Reverse", "value": 100, "name": "Matrix Lab 1", "id": 7}, "id": 6539, "user": {"name": "minimayer", "id": 2853}}], "meta": {"count": 1}}

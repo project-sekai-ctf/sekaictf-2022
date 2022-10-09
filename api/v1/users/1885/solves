@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T14:26:56+00:00", "type": "correct", "challenge_id": 37, "team": {"name": "UiA-CTF", "id": 218}, "challenge": {"category": "Misc", "value": 100, "name": "Console Port", "id": 37}, "id": 3892, "user": {"name": "dsverre", "id": 1885}}], "meta": {"count": 1}}

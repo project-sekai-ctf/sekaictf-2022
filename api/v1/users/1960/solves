@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-09-30T17:26:25+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "Bulba Hackers", "id": 403}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 893, "user": {"name": "ledza228", "id": 1960}}], "meta": {"count": 1}}

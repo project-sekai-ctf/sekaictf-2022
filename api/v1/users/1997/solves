@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T08:08:49+00:00", "type": "correct", "challenge_id": 11, "team": {"name": "duks", "id": 705}, "challenge": {"category": "Cryptography", "value": 268, "name": "FaILProof", "id": 11}, "id": 3095, "user": {"name": "lemonade", "id": 1997}}], "meta": {"count": 1}}

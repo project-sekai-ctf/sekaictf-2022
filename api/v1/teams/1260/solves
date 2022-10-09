@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-02T12:34:42+00:00", "type": "correct", "challenge_id": 29, "team": {"name": "abdilahrf", "id": 1260}, "challenge": {"category": "Web", "value": 100, "name": "Bottle Poem", "id": 29}, "id": 6274, "user": {"name": "abdilahrf", "id": 2777}}], "meta": {"count": 1}}

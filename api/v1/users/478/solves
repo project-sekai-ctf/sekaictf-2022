@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T09:33:08+00:00", "type": "correct", "challenge_id": 10, "team": {"name": "spy8+9", "id": 148}, "challenge": {"category": "Cryptography", "value": 100, "name": "Time Capsule", "id": 10}, "id": 3262, "user": {"name": "\u96ea\u5c71\u5c71\u838a", "id": 478}}], "meta": {"count": 1}}

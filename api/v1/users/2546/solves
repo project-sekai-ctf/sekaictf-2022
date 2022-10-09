@@ -1,0 +1,1 @@
+{"success": true, "data": [{"date": "2022-10-01T18:54:00+00:00", "type": "correct", "challenge_id": 7, "team": {"name": "Pum41337", "id": 1116}, "challenge": {"category": "Reverse", "value": 100, "name": "Matrix Lab 1", "id": 7}, "id": 4504, "user": {"name": "markosh", "id": 2546}}], "meta": {"count": 1}}
